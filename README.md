@@ -5,7 +5,7 @@
 ![Docker](https://img.shields.io/badge/Docker-Container-blue)
 ![AWS](https://img.shields.io/badge/AWS-Cloud-yellow)
 
-# Hi, I'm Dai Ngo 👋
+# Hi, I'm Dai Ngo Tan 👋
 
 Machine Learning Engineer | Applied Data Scientist  
 M.Eng. Applied Data Science @ University of Victoria  
