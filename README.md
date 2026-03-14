@@ -1,4 +1,3 @@
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=ntdai95&show_icons=true)
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ntdai95&layout=compact)
 ![Python](https://img.shields.io/badge/Python-ML-blue)
 ![Spark](https://img.shields.io/badge/Apache%20Spark-Big%20Data-orange)
