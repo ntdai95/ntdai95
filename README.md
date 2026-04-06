@@ -7,8 +7,11 @@
 
 # Hi, I'm Dai Ngo Tan 👋
 
-Machine Learning Engineer | Applied Data Scientist  
-M.Eng. Applied Data Science @ University of Victoria  
+Machine Learning Engineer | Applied Data Scientist
+ex-SWE @ T-Mobile
+M.Eng. Applied Data Science @ University of Victoria
+M.S. Computer Science @ University of Chicago
+B.S. Economics @ University of Washington
 
 I build **production-ready machine learning systems**, focusing on:
 
