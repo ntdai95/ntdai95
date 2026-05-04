@@ -51,7 +51,7 @@ Python • Apache Spark • XGBoost • MLflow • FastAPI • Qdrant • LLM
 **Results**
 
 - R² = 0.9999
-- RMSE = 0.0061
+- RMSE = 0.00586
 - Retrieval hit@k = 1.0
 
 **Highlights**
