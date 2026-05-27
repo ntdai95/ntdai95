@@ -1,124 +1,77 @@
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ntdai95&layout=compact)
-![Python](https://img.shields.io/badge/Python-ML-blue)
-![Spark](https://img.shields.io/badge/Apache%20Spark-Big%20Data-orange)
-![FastAPI](https://img.shields.io/badge/FastAPI-API-green)
-![Docker](https://img.shields.io/badge/Docker-Container-blue)
-![AWS](https://img.shields.io/badge/AWS-Cloud-yellow)
+# Tan Dai Ngo
 
-# Hi, I'm Dai Ngo Tan 👋
+**Machine Learning Engineer · Software Engineer · Applied Data Scientist**
 
-Machine Learning Engineer | Applied Data Scientist  
-ex-SWE @ T-Mobile  
-M.Eng. Applied Data Science @ University of Victoria  
-M.S. Computer Science @ University of Chicago  
-B.S. Economics @ University of Washington  
-
-I build **production-ready machine learning systems**, focusing on:
-
-- distributed data processing
-- ML pipelines and forecasting systems
-- retrieval-augmented generation (RAG)
-- scalable data platforms
+M.Eng. Applied Data Science @ University of Victoria · M.S. Computer Science @ University of Chicago
 
 ---
 
-## 🧠 Technical Focus
+## Technical Stack
 
-Machine Learning  
-• XGBoost • CatBoost • scikit-learn • regression • forecasting  
+**Languages:** Python · Java · Go · SQL · R
 
-Data Systems  
-• Apache Spark • Kafka • Cassandra • ETL pipelines  
+**Machine Learning:** XGBoost · CatBoost · scikit-learn · PyTorch · MLflow · Optuna · Pandas · NumPy
 
-ML Infrastructure  
-• FastAPI • Docker • AWS EC2 • MLflow  
+**Distributed Systems & Data:** Apache Spark · PySpark · Kafka · Cassandra · MongoDB · MySQL · Neo4j
 
-GenAI & Retrieval  
-• Sentence Transformers • Qdrant • RAG systems • Ollama LLM  
+**ML Infrastructure & Deployment:** FastAPI · Docker · AWS (EC2, S3) · Sentence Transformers · Qdrant · Ollama
 
 ---
 
-# 🚀 Featured ML Systems
+## Featured Projects
 
-## Distributed Ocean Data ML Platform with RAG
+### [Distributed Ocean Data ML Platform with RAG](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Ocean%20Data%20ML%20Platform%20with%20RAG)
+End-to-end distributed ML system processing 10M+ ocean sensor observations from NOAA and ONC.
 
-Production-style ML system that processes scientific datasets using Spark and exposes a natural-language interface.
+- Bronze → Silver → Gold Spark architecture for large-scale ETL
+- XGBoost forecasting with chronological holdout validation on temporally correlated data
+- Production RAG system using Sentence Transformers, Qdrant, and Ollama
+- FastAPI inference and retrieval services with benchmarked performance
 
-**Stack**
+**Results:** RMSE 0.00586 · R² 0.9999 · Retrieval hit@k 1.0 · Term recall 0.875
 
-Python • Apache Spark • XGBoost • MLflow • FastAPI • Qdrant • LLM
-
-**Results**
-
-- R² = 0.9999
-- RMSE = 0.00586
-- Retrieval hit@k = 1.0
-
-**Highlights**
-
-• Distributed ETL pipeline for NetCDF datasets  
-• Bronze → Silver → Gold data architecture  
-• ML experiment tracking with MLflow  
-• Vector search over dataset metadata  
-• Retrieval-augmented LLM interface  
+**Stack:** Python · Apache Spark · XGBoost · MLflow · FastAPI · Qdrant · Ollama · Docker · AWS
 
 ---
 
-## Fuel Blending ML System (Shell.ai Hackathon)
+### [Anomaly Detection via Isolation Forest on 1M+ Bird Observations](https://github.com/ntdai95/CSC502-Final-Project)
+Custom Isolation Forest implementation on the eBird dataset — 1,093,203 real-world observations across British Columbia.
 
-End-to-end ML pipeline for predicting chemical blend properties.
+- From-scratch Python implementation with PySpark data processing
+- Stratified sampling preserving species frequency distribution across 8 quantile bins
+- Discovered a previously undescribed geographic variant of feature-specific swamping
+- Proposed rank transformation and density-aware subsampling as mitigation strategies
 
-**Stack**
+**Results:** AUC 0.67 · Linear runtime scaling confirmed across full hyperparameter grid
 
-Python • CatBoost • XGBoost • FastAPI • Docker • AWS
-
-**Results**
-
-CatBoost MAPE: 0.64  
-XGBoost MAPE: 1.29  
-
-**Highlights**
-
-• Multi-output regression system  
-• Feature engineering using entropy-based mixture metrics  
-• Production inference API using FastAPI  
+**Stack:** Python · PySpark · Apache Spark · scikit-learn · Matplotlib
 
 ---
 
-## Stock Sentiment Analysis & Financial Modeling
+### [Fuel Blending ML System — Shell.ai Hackathon 2025](https://github.com/ntdai95/Shell.ai-Hackathon-2025)
+Production ML system for multi-output regression across 10 chemical blend properties.
 
-Financial analytics system connecting social sentiment to market behavior.
+- Benchmarked XGBoost vs CatBoost using 5-fold cross-validation
+- Feature engineering with entropy-based mixture metrics and weighted aggregation
+- Production inference API deployed on AWS EC2
 
-**Stack**
+**Results:** CatBoost MAPE 0.64 vs XGBoost MAPE 1.29
 
-Python • FinTwitBERT • Neo4j • SQLite • GARCH
-
-**Highlights**
-
-• Processed 15k+ tweets across 10 tech stocks  
-• Sentiment aggregation and Granger causality testing  
-• Volatility modeling using GARCH(1,1)
+**Stack:** Python · CatBoost · XGBoost · FastAPI · Docker · AWS EC2
 
 ---
 
-# 📊 Current Focus
+### [Parallel Image Processing Engine](https://github.com/ntdai95/Resume-Projects/tree/main/Parallel%20Image%20Processing%20Engine)
+High-performance image processing engine in Go with multiple concurrency models.
 
-I am currently working on:
+- Implemented sequential, fan-in/fan-out pipeline, and BSP execution models
+- Custom 2D convolution kernels for grayscale, sharpening, blurring, edge detection
+- 20% runtime reduction with fan-in/fan-out · 30% reduction with BSP model
 
-• scalable ML pipelines for large scientific datasets  
-• retrieval-augmented ML systems  
-• distributed data processing with Spark  
-• production ML deployment
+**Stack:** Go · goroutines · channels · sync.WaitGroup
 
 ---
 
-# 📫 Connect
+## Connect
 
-LinkedIn  
-https://linkedin.com/in/ntdai95  
-
-Portfolio  
-https://ntdai95.github.io  
-
-Email  
-ngotandai95@gmail.com
+[LinkedIn](https://linkedin.com/in/ntdai95) · [Portfolio](https://ntdai95.github.io) · ngotandai95@gmail.com
