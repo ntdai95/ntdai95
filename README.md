@@ -2,7 +2,7 @@
 
 **Machine Learning Engineer · Software Engineer · Applied Data Scientist**
 
-M.Eng. Applied Data Science @ University of Victoria · M.S. Computer Science @ University of Chicago
+M.Eng. Applied Data Science @ University of Victoria · M.S. Computer Science @ University of Chicago · B.S. Economics @ University of Washington
 
 ---
 
