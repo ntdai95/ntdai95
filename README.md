@@ -1,6 +1,6 @@
 # Tan Dai Ngo
 
-**Applied Data Scientist · Machine Learning Engineer · Software Engineer**
+**Applied Data Scientist · Machine Learning Engineer · Software Engineer**<br>
 Victoria, BC · [LinkedIn](https://linkedin.com/in/ntdai95) · [Portfolio](https://ntdai95.github.io) · ngotandai95@gmail.com
 
 Two years at T-Mobile building REST services in Java and Spring Boot, alongside Kafka and Cassandra. Now in a graduate co-op program, working on detection models and the data pipelines underneath them.
@@ -38,9 +38,9 @@ The work I care most about is finding out whether a good result is actually real
 
 ## Education
 
-**M.Eng. Applied Data Science**, University of Victoria — Co-op, Sep 2025 – Dec 2027 · GPA 8.68 / 9.00<br>
+**M.Eng. Applied Data Science**, University of Victoria — Sep 2025 – Dec 2027 · Co-op · GPA 8.68 / 9.00<br>
 **M.S. Computer Science**, University of Chicago — Sep 2020 – Mar 2022<br>
-**B.S. Economics**, University of Washington — minors in Applied Mathematics and Informatics
+**B.S. Economics**, University of Washington — Sep 2015 – Aug 2019 · minors in Applied Mathematics and Informatics
 
 ---
 
