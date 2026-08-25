@@ -2,8 +2,9 @@
 
 **Applied Data Scientist · Machine Learning Engineer · Software Engineer**
 
-M.Eng. Applied Data Science, University of Victoria (Co-op, Sep 2025 – Dec 2027)
-M.S. Computer Science, University of Chicago · B.S. Economics, University of Washington
+- M.Eng. Applied Data Science, University of Victoria (Co-op, Sep 2025 – Dec 2027)
+- M.S. Computer Science, University of Chicago
+- B.S. Economics, University of Washington
 
 Two years at T-Mobile building REST services in Java and Spring Boot, alongside Kafka and Cassandra, before returning to graduate school. Most of what I work on now sits somewhere between detection models and the pipelines underneath them, and the part I care about is whether a result survives being checked.
 
