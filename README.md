@@ -67,8 +67,7 @@ A platform over **10M+ ocean sensor observations** from NOAA and ONC, two agenci
 - Retrieval over dataset metadata with Sentence Transformers, Qdrant and Ollama, running locally end to end
 - MLflow for experiment tracking, Optuna for hyperparameter search, FastAPI serving both paths, containerized so any run reproduces
 
-**Retrieval scored against a held-out query set: hit@k 1.0, term recall 0.875.**<br>
-I built the evaluation set first, before the retrieval was working.
+**Retrieval scored against a held-out query set: hit@k 1.0, term recall 0.875.**
 
 ---
 
