@@ -12,10 +12,10 @@ Two years at T-Mobile building REST services in Java and Spring Boot, alongside 
 
 ## Technical Stack
 
-**Languages:** Python · Java · Go · SQL
-**Machine Learning:** PyTorch · scikit-learn · XGBoost · CatBoost · pandas · NumPy · MLflow · Optuna · Sentence Transformers · DistilBERT
-**Data at Scale:** Apache Spark · PySpark · Kafka · Cassandra · MySQL · SQLite · MongoDB · Neo4j · Qdrant
-**Services & Deployment:** FastAPI · Flask · Spring Boot · Docker · AWS (EC2, S3) · Ollama
+**Languages:** Python · Java · Go · SQL<br>
+**Machine Learning:** PyTorch · scikit-learn · XGBoost · CatBoost · pandas · NumPy · MLflow · Optuna · Sentence Transformers · DistilBERT<br>
+**Data at Scale:** Apache Spark · PySpark · Kafka · Cassandra · MySQL · SQLite · MongoDB · Neo4j · Qdrant<br>
+**Services & Deployment:** FastAPI · Flask · Spring Boot · Docker · AWS (EC2, S3) · Ollama<br>
 **Practice:** Git · GitHub pull requests · code review · pytest · OpenAPI
 
 ---
