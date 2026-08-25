@@ -7,7 +7,7 @@ Nearly two years at T-Mobile building REST services in Java and Spring Boot, alo
 
 I'm interested in whether a result holds up. On my graduate capstone that meant proving our own benchmark leaked, and reporting that the honest score was **a third worse** than the one we'd started with.
 
-**Available January to December 2027** for a co-op or internship term. Valid Canadian co-op work permit.
+**Available from January to December 2027** for a co-op or internship term. Valid Canadian co-op work permit.
 
 ---
 
