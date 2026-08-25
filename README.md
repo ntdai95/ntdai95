@@ -3,9 +3,9 @@
 **Applied Data Scientist · Machine Learning Engineer · Software Engineer**<br>
 Victoria, BC · [LinkedIn](https://linkedin.com/in/ntdai95) · [Portfolio](https://ntdai95.github.io) · ngotandai95@gmail.com
 
-Two years at T-Mobile building REST services in Java and Spring Boot, alongside Kafka and Cassandra. Now in a graduate co-op program, working on detection models and the data pipelines underneath them.
+Nearly two years at T-Mobile building REST services in Java and Spring Boot, alongside Kafka and Cassandra. Now in a graduate co-op program, mostly working on detection models and the pipelines underneath them.
 
-The work I care most about is finding out whether a good result is actually real. On my graduate capstone that meant proving our benchmark leaked, and reporting that the honest score was **a third worse** than the number we started with.
+I'm interested in whether a result holds up. On my graduate capstone that meant proving our own benchmark leaked, and reporting that the honest score was **a third worse** than the one we'd started with.
 
 **Available January–December 2027** for a co-op or internship term. Valid Canadian co-op work permit.
 
@@ -51,7 +51,7 @@ The work I care most about is finding out whether a good result is actually real
 
 Two-stage detector on CIC IoT-DIAD 2024: unsupervised packet scoring feeds a supervised flow classifier. Six models compared under a hard **1% false-positive budget** — k-means with autoencoder, Deep SVDD, an Anomal-E edge-feature GNN, score fusion, then supervised classification. Best result: multiclass XGBoost at **92.5% recall, 0.96% FPR, PR-AUC 0.944**.
 
-**The finding that mattered.** The benchmark leaks capture-session identity. Benign traffic was recorded on two days while each attack class occupies its own, and the capture window is predictable from flow features alone at **ROC-AUC 0.922**. A four-condition holdout isolated it: under an honest session-disjoint split, PR-AUC falls **0.927 → 0.630**, and holding recall costs **32% FPR** — thirty-two times the budget. What fails first is calibration, not ranking.
+**The benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own, so the capture window is predictable from flow features alone at **ROC-AUC 0.922**. I ran a four-condition holdout to isolate it. Under an honest session-disjoint split, PR-AUC falls **0.927 → 0.630**, and holding recall costs **32% FPR**, thirty-two times the budget. What fails first is calibration, not ranking.
 
 **My contribution:** the leakage discovery, the four-condition experiment, and `verify_context_integrity.py`, which confirms all 23 engineered features stay causal, label-free and inside the budget.
 
@@ -60,14 +60,14 @@ Two-stage detector on CIC IoT-DIAD 2024: unsupervised packet scoring feeds a sup
 ### [Ocean Data Platform with Retrieval-Augmented Search](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Ocean%20Data%20ML%20Platform%20with%20RAG)
 *Solo · Python, Spark, XGBoost, MLflow, Optuna, Qdrant, FastAPI, Docker, AWS*
 
-End-to-end platform over **10M+ ocean sensor observations** from NOAA and ONC, two agencies with incompatible NetCDF formats.
+A platform over **10M+ ocean sensor observations** from NOAA and ONC, two agencies whose NetCDF formats don't agree on much.
 
 - Bronze → Silver → Gold Spark layers for large-scale ETL
 - XGBoost forecasting validated on **chronological** holdouts, not random splits, since the series is temporally correlated
 - Retrieval over dataset metadata with Sentence Transformers, Qdrant and Ollama, running locally end to end
 - MLflow for experiment tracking, Optuna for hyperparameter search, FastAPI serving both paths, containerized so any run reproduces
 
-**Retrieval evaluated against a held-out query set: hit@k 1.0, term recall 0.875.** Measured, not judged by eye.
+**Retrieval scored against a held-out query set: hit@k 1.0, term recall 0.875.** I built the evaluation set first, before the retrieval was working.
 
 ---
 
@@ -81,7 +81,7 @@ A booking service that had to interoperate with **four other teams' independent 
 - Session tokens checked for existence, one-hour freshness and permission scope
 - 847-line SQLite layer over four tables enforcing rules on funds and availability
 
-Interoperating with code you did not write teaches you quickly that an unwritten assumption is a defect.
+A good number of those tests exist because another team's service did something we hadn't anticipated.
 
 ---
 
@@ -101,6 +101,6 @@ Isolation Forest implemented **from the published algorithm rather than imported
 ### [Parallel Image Processing Engine](https://github.com/ntdai95/Resume-Projects/tree/main/Parallel%20Image%20Processing%20Engine)
 *Solo · Go, goroutines, channels, sync.WaitGroup*
 
-Image convolution engine with three execution models — sequential, fan-in/fan-out pipeline, and bulk-synchronous parallel — over custom 2D kernels for grayscale, sharpen, blur and edge detection.
+Image convolution engine with three execution models: sequential, a fan-in/fan-out pipeline, and bulk-synchronous parallel. Custom 2D kernels for grayscale, sharpen, blur and edge detection.
 
 **20% runtime reduction with fan-in/fan-out, 30% with BSP.**
