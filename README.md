@@ -7,7 +7,7 @@ Nearly two years at T-Mobile building REST services in Java and Spring Boot, alo
 
 I'm interested in whether a result holds up. On my graduate capstone that meant proving our own benchmark leaked, and reporting that the honest score was **a third worse** than the one we'd started with.
 
-**Available January – December 2027** for a co-op or internship term. Valid Canadian co-op work permit.
+**Available January to December 2027** for a co-op or internship term. Valid Canadian co-op work permit.
 
 ---
 
@@ -38,9 +38,9 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 
 ## Education
 
-**M.Eng. Applied Data Science**, University of Victoria — Sep 2025 – Dec 2027<br>
-**M.S. Computer Science**, University of Chicago — Sep 2020 – Mar 2022<br>
-**B.S. Economics**, University of Washington — Sep 2015 – Aug 2019
+**M.Eng. Applied Data Science**, University of Victoria, Sep 2025 to Dec 2027<br>
+**M.S. Computer Science**, University of Chicago, Sep 2020 to Mar 2022<br>
+**B.S. Economics**, University of Washington, Sep 2015 to Aug 2019
 
 ---
 
@@ -49,7 +49,7 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 ### [Multi-Stage IoT Intrusion Detection](https://github.com/ntdai95/ECE592B-Capstone-Project)
 *Graduate capstone · team of 7 · Python, PyTorch, XGBoost*
 
-Two-stage detector on CIC IoT-DIAD 2024: unsupervised packet scoring feeds a supervised flow classifier. Six models compared under a hard **1% false-positive budget**, namely k-means with autoencoder, Deep SVDD, an Anomal-E edge-feature GNN, score fusion, and supervised classification. Best result: multiclass XGBoost at **92.5% recall, 0.96% FPR, PR-AUC 0.944**.
+Two-stage detector on CIC IoT-DIAD 2024. Stage one scores packets with k-means and an autoencoder, Deep SVDD, and an Anomal-E edge-feature GNN, fused into a single score. Stage two is a supervised flow classifier that consumes it. Six models compared under a hard **1% false-positive budget**, best being multiclass XGBoost at **92.5% recall, 0.96% FPR, PR-AUC 0.944**.
 
 **The benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own, so the capture window is predictable from flow features alone at **ROC-AUC 0.922**. I ran a four-condition holdout to isolate it. Under an honest session-disjoint split, PR-AUC falls **0.927 → 0.630**, and holding recall costs **32% FPR**, thirty-two times the budget. What fails first is calibration, not ranking.
 
@@ -72,7 +72,7 @@ A platform over **10M+ ocean sensor observations** from NOAA and ONC, two agenci
 ---
 
 ### [Distributed Facility Reservation System](https://github.com/ntdai95/Resume-Projects)
-*Graduate software engineering · team of 4 · Python, FastAPI, SQLite, pytest*
+*Applied Software Engineering · team of 4 · Python, FastAPI, SQLite, pytest*
 
 A booking service that had to interoperate with **four other teams' independent implementations** of one shared HTTP contract that nobody could change unilaterally.
 
@@ -86,7 +86,7 @@ A good number of those tests exist because another team's service did something 
 ---
 
 ### [Anomaly Detection on 1M+ Species Observations](https://github.com/ntdai95/CSC502-Final-Project)
-*Graduate software engineering · team of 3 · Python, PySpark, scikit-learn*
+*Systems for Massive Datasets · team of 3 · Python, PySpark, scikit-learn*
 
 Isolation Forest implemented **from the published algorithm rather than imported**, on 1,093,203 eBird observations across British Columbia.
 
