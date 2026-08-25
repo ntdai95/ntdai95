@@ -81,8 +81,6 @@ A booking service that had to interoperate with **four other teams' independent 
 - Session tokens checked for existence, one-hour freshness and permission scope
 - 847-line SQLite layer over four tables enforcing rules on funds and availability
 
-A good number of those tests exist because another team's service did something we hadn't anticipated.
-
 ---
 
 ### [Anomaly Detection on 1M+ Species Observations](https://github.com/ntdai95/CSC502-Final-Project)
