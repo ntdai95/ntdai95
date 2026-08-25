@@ -15,7 +15,7 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 
 | Project | What it is | Headline result |
 |---|---|---|
-| [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 92.5% recall at 0.96% FPR — **and proof the benchmark leaked** |
+| [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 92.5% recall at 0.96% FPR **and proof the benchmark leaked** |
 | [**Ocean Data Platform**](https://github.com/ntdai95/Resume-Projects) | 10M+ sensor records, Spark → forecasting → RAG | Retrieval hit@k 1.0, term recall 0.875 |
 | [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
 | [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) | Isolation Forest written from the paper | 1,093,203 records, linear scaling verified |
@@ -49,7 +49,7 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 ### [Multi-Stage IoT Intrusion Detection](https://github.com/ntdai95/ECE592B-Capstone-Project)
 *Graduate capstone · team of 7 · Python, PyTorch, XGBoost*
 
-Two-stage detector on CIC IoT-DIAD 2024: unsupervised packet scoring feeds a supervised flow classifier. Six models compared under a hard **1% false-positive budget** — k-means with autoencoder, Deep SVDD, an Anomal-E edge-feature GNN, score fusion, then supervised classification. Best result: multiclass XGBoost at **92.5% recall, 0.96% FPR, PR-AUC 0.944**.
+Two-stage detector on CIC IoT-DIAD 2024: unsupervised packet scoring feeds a supervised flow classifier. Six models compared under a hard **1% false-positive budget**, namely k-means with autoencoder, Deep SVDD, an Anomal-E edge-feature GNN, score fusion, and supervised classification. Best result: multiclass XGBoost at **92.5% recall, 0.96% FPR, PR-AUC 0.944**.
 
 **The benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own, so the capture window is predictable from flow features alone at **ROC-AUC 0.922**. I ran a four-condition holdout to isolate it. Under an honest session-disjoint split, PR-AUC falls **0.927 → 0.630**, and holding recall costs **32% FPR**, thirty-two times the budget. What fails first is calibration, not ranking.
 
@@ -86,7 +86,7 @@ A good number of those tests exist because another team's service did something 
 ---
 
 ### [Anomaly Detection on 1M+ Species Observations](https://github.com/ntdai95/CSC502-Final-Project)
-*Team of 3 · Python, PySpark, scikit-learn*
+*Graduate software engineering · team of 3 · Python, PySpark, scikit-learn*
 
 Isolation Forest implemented **from the published algorithm rather than imported**, on 1,093,203 eBird observations across British Columbia.
 
