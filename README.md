@@ -38,9 +38,9 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 
 ## Education
 
-**M.Eng. Applied Data Science**, University of Victoria, Sep 2025 to Dec 2027<br>
-**M.S. Computer Science**, University of Chicago, Sep 2020 to Mar 2022<br>
-**B.S. Economics**, University of Washington, Sep 2015 to Aug 2019
+**M.Eng. Applied Data Science**, University of Victoria – Sep 2025 – Dec 2027<br>
+**M.S. Computer Science**, University of Chicago – Sep 2020 – Mar 2022<br>
+**B.S. Economics**, University of Washington – Sep 2015 – Aug 2019
 
 ---
 
@@ -67,7 +67,8 @@ A platform over **10M+ ocean sensor observations** from NOAA and ONC, two agenci
 - Retrieval over dataset metadata with Sentence Transformers, Qdrant and Ollama, running locally end to end
 - MLflow for experiment tracking, Optuna for hyperparameter search, FastAPI serving both paths, containerized so any run reproduces
 
-**Retrieval scored against a held-out query set: hit@k 1.0, term recall 0.875.** I built the evaluation set first, before the retrieval was working.
+**Retrieval scored against a held-out query set: hit@k 1.0, term recall 0.875.**<br>
+I built the evaluation set first, before the retrieval was working.
 
 ---
 
