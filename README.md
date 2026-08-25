@@ -38,9 +38,9 @@ The work I care most about is finding out whether a good result is actually real
 
 ## Education
 
-**M.Eng. Applied Data Science**, University of Victoria — Sep 2025 – Dec 2027 · Co-op · GPA 8.68 / 9.00<br>
+**M.Eng. Applied Data Science**, University of Victoria — Sep 2025 – Dec 2027<br>
 **M.S. Computer Science**, University of Chicago — Sep 2020 – Mar 2022<br>
-**B.S. Economics**, University of Washington — Sep 2015 – Aug 2019 · minors in Applied Mathematics and Informatics
+**B.S. Economics**, University of Washington — Sep 2015 – Aug 2019
 
 ---
 
