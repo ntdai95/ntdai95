@@ -2,7 +2,7 @@
 
 **Applied Data Scientist · Machine Learning Engineer · Software Engineer**
 
-- M.Eng. Applied Data Science, University of Victoria (Co-op, Sep 2025 – Dec 2027)
+- M.Eng. Applied Data Science, University of Victoria
 - M.S. Computer Science, University of Chicago
 - B.S. Economics, University of Washington
 
@@ -31,8 +31,8 @@ Two-stage detector on CIC IoT-DIAD 2024: unsupervised packet scoring feeding a s
 - **Found the benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own; capture window is predictable from flow features alone at ROC-AUC 0.922
 - Ran a four-condition holdout to isolate it: under an honest session-disjoint split, PR-AUC falls 0.927 → 0.630, and holding recall costs 32% FPR
 
-**Best result:** multiclass XGBoost at 92.5% recall, 0.96% FPR, PR-AUC 0.944.
-**My contribution:** the leakage discovery, the four-condition experiment, and the feature-integrity audit.
+**Best result:** multiclass XGBoost at 92.5% recall, 0.96% FPR, PR-AUC 0.944.<br>
+**My contribution:** the leakage discovery, the four-condition experiment, and the feature-integrity audit.<br>
 **Stack:** Python · PyTorch · XGBoost · scikit-learn
 
 ---
@@ -46,7 +46,7 @@ End-to-end platform over 10M+ ocean sensor observations from NOAA and ONC, built
 - Retrieval over dataset metadata with Sentence Transformers, Qdrant and Ollama, running locally end to end
 - FastAPI serving for both paths, MLflow for experiment tracking and Optuna for hyperparameter search, containerized so any run reproduces from scratch
 
-**Retrieval evaluated against a held-out query set:** hit@k 1.0, term recall 0.875.
+**Retrieval evaluated against a held-out query set:** hit@k 1.0, term recall 0.875.<br>
 **Stack:** Python · Apache Spark · XGBoost · MLflow · Optuna · Qdrant · Sentence Transformers · Ollama · FastAPI · Docker · AWS
 
 ---
@@ -60,7 +60,7 @@ Booking service that had to interoperate with four other teams' independent impl
 - Session tokens checked for existence, one-hour freshness and permission scope
 - 847-line SQLite layer over four tables enforcing rules on funds and availability
 
-Nobody could change the contract unilaterally, which is a fast way to learn that an unwritten assumption is a defect.
+Nobody could change the contract unilaterally, which is a fast way to learn that an unwritten assumption is a defect.<br>
 **Stack:** Python · FastAPI · SQLite · pytest
 
 ---
@@ -74,7 +74,7 @@ Isolation Forest implemented from the published algorithm rather than imported, 
 - Identified a previously undescribed geographic variant of feature-specific swamping
 - Proposed rank transformation and density-aware subsampling as mitigations
 
-**Results:** AUC 0.67, with linear runtime scaling verified across the hyperparameter grid.
+**Results:** AUC 0.67, with linear runtime scaling verified across the hyperparameter grid.<br>
 **Stack:** Python · PySpark · scikit-learn · Matplotlib
 
 ---
