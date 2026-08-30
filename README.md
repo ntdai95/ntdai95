@@ -5,7 +5,7 @@ Victoria, BC · [LinkedIn](https://linkedin.com/in/ntdai95) · [Portfolio](https
 
 Nearly two years at T-Mobile building REST services in Java and Spring Boot, alongside Kafka and Cassandra. Now in a graduate co-op program, mostly working on detection models and the pipelines underneath them.
 
-I'm interested in whether a result holds up. On my graduate capstone that meant proving our own benchmark leaked, and reporting that the honest score fell to **about a fifth** of where we'd started.
+I'm interested in whether a result holds up. On my graduate capstone that meant proving our own benchmark leaked, and reporting that the honest score fell to **about a quarter** of where we'd started.
 
 **Available from January to December 2027** for a co-op or internship term. Valid Canadian co-op work permit.
 
@@ -15,7 +15,7 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 
 | Project | What it is | Headline result |
 |---|---|---|
-| [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 99.4% recall at 0.81% FPR **and proof the benchmark leaked** |
+| [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 99.6% recall at 0.82% FPR **and proof the benchmark leaked** |
 | [**Ocean Data Platform**](https://github.com/ntdai95/Resume-Projects) | 10M+ sensor records, Spark → forecasting → RAG | Retrieval hit@k 1.0, term recall 0.875 |
 | [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
 | [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) | Isolation Forest written from the paper | 1,093,203 records, linear scaling verified |
@@ -49,9 +49,9 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 ### [Multi-Stage IoT Intrusion Detection](https://github.com/ntdai95/ECE592B-Capstone-Project)
 *Graduate capstone · team of 7 · Python, PyTorch, XGBoost*
 
-Two-stage detector on CIC IoT-DIAD 2024. Stage one scores packets with k-means and an autoencoder, Deep SVDD, and an Anomal-E edge-feature GNN, fused into a single score. Stage two is a supervised flow classifier that consumes it. Six models compared under a hard **1% false-positive budget**, best being multiclass XGBoost at **99.4% recall, 0.81% FPR, PR-AUC 0.995**.
+Two-stage detector on CIC IoT-DIAD 2024. Stage one scores packets with k-means and an autoencoder, Deep SVDD, and an Anomal-E edge-feature GNN, fused into a single score. Stage two is a supervised flow classifier that consumes it. Six models compared under a hard **1% false-positive budget**, best being multiclass XGBoost at **99.6% recall, 0.82% FPR, PR-AUC 0.995**.
 
-**The benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own — the same threshold that holds 1% FPR on one capture day costs over 32% on another. I ran a four-condition holdout to isolate it. Under an honest session-disjoint split, PR-AUC falls **0.994 → 0.189**, and holding recall costs over **32% FPR**, roughly thirty-two times the budget. What fails first is calibration, not ranking.
+**The benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own — the same threshold that holds 1% FPR on one capture day costs over 30% on another. I ran a four-condition holdout to isolate it. Under an honest session-disjoint split, PR-AUC falls **0.995 → 0.242**, and holding recall costs over **34% FPR**, roughly thirty-four times the budget. What fails first is calibration, not ranking.
 
 **My contribution:** the leakage discovery, the four-condition experiment, and `verify_context_integrity.py`, which confirms all 23 engineered features stay causal, label-free and inside the budget.
 
