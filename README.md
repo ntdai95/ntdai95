@@ -16,7 +16,7 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 | Project | What it is | Headline result |
 |---|---|---|
 | [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 99.6% recall at 0.82% FPR **and proof the benchmark leaked** |
-| [**Ocean Data Platform**](https://github.com/ntdai95/Resume-Projects) | 10M+ sensor records, Spark → forecasting → RAG | Retrieval hit@k 1.0, term recall 0.875 |
+| [**Ocean Data Platform**](https://github.com/ntdai95/Resume-Projects) | 10M+ sensor records, Spark → forecasting → RAG | Retrieval hit@k 0.9, term recall 0.85 |
 | [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
 | [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) | Isolation Forest written from the paper | 1,093,203 records, linear scaling verified |
 | [**Parallel Image Engine**](https://github.com/ntdai95/Resume-Projects) | Three concurrency models in Go | 30% runtime reduction (BSP) |
@@ -65,9 +65,9 @@ A platform over **10M+ ocean sensor observations** from NOAA and ONC, two agenci
 - Bronze → Silver → Gold Spark layers for large-scale ETL
 - XGBoost forecasting validated on **chronological** holdouts, not random splits, since the series is temporally correlated
 - Retrieval over dataset metadata with Sentence Transformers, Qdrant and Ollama, running locally end to end
-- MLflow for experiment tracking, Optuna for hyperparameter search, FastAPI serving both paths, containerized so any run reproduces
+- MLflow for experiment tracking, Optuna for hyperparameter search, FastAPI and the vector store containerized with Docker Compose
 
-**Retrieval scored against a held-out query set: hit@k 1.0, term recall 0.875.**
+**Retrieval scored against a held-out query set of 10 natural-language questions: hit@k 0.9, term recall 0.85.**
 
 A naive persistence baseline (predict = previous reading) beats the tuned XGBoost model on raw RMSE. Expected for a high-frequency, smooth signal, and the reason this section reports both numbers rather than the model's R² alone. Extended the check across seven horizons out to 2 hours and a version with sensor context added (salinity, dissolved oxygen) — persistence won every horizon, and XGBoost's R² went negative past 30 minutes, the signature of a model overfitting training-period noise rather than learning real drift.
 
