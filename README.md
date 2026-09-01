@@ -69,7 +69,7 @@ A platform over **10M+ ocean sensor observations** from NOAA and ONC, two agenci
 
 **Retrieval scored against a held-out query set: hit@k 1.0, term recall 0.875.**
 
-A naive persistence baseline (predict = previous reading) beats the tuned XGBoost model on raw RMSE. Expected for a high-frequency, smooth signal, and the reason this section reports both numbers rather than the model's R² alone.
+A naive persistence baseline (predict = previous reading) beats the tuned XGBoost model on raw RMSE. Expected for a high-frequency, smooth signal, and the reason this section reports both numbers rather than the model's R² alone. Extended the check across seven horizons out to 2 hours and a version with sensor context added (salinity, dissolved oxygen) — persistence won every horizon, and XGBoost's R² went negative past 30 minutes, the signature of a model overfitting training-period noise rather than learning real drift.
 
 ---
 
