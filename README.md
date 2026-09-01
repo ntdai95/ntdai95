@@ -69,6 +69,8 @@ A platform over **10M+ ocean sensor observations** from NOAA and ONC, two agenci
 
 **Retrieval scored against a held-out query set: hit@k 1.0, term recall 0.875.**
 
+A naive persistence baseline (predict = previous reading) beats the tuned XGBoost model on raw RMSE. Expected for a high-frequency, smooth signal, and the reason this section reports both numbers rather than the model's R² alone.
+
 ---
 
 ### [Distributed Facility Reservation System](https://github.com/ntdai95/Resume-Projects)
