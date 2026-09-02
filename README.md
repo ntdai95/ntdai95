@@ -16,7 +16,7 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 | Project | What it is | Headline result |
 |---|---|---|
 | [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 99.6% recall at 0.82% FPR **and proof the benchmark leaked** |
-| [**Distributed Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects) | 10M+ sensor records, Spark → forecasting → RAG | Retrieval hit@k 0.9, term recall 0.85 |
+| [**Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects) | 10M+ sensor records, Spark → forecasting → RAG | Retrieval hit@k 0.9, term recall 0.85 |
 | [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
 | [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) | Isolation Forest written from the paper | 1,093,203 records, linear scaling verified |
 | [**Parallel Image Engine**](https://github.com/ntdai95/Resume-Projects) | Three concurrency models in Go | 30% runtime reduction (BSP) |
@@ -57,7 +57,7 @@ Two-stage detector on CIC IoT-DIAD 2024. Stage one scores packets with k-means a
 
 ---
 
-### [Distributed Ocean Data ML Platform with RAG](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Ocean%20Data%20ML%20Platform%20with%20RAG)
+### [Ocean Data ML Platform with RAG](https://github.com/ntdai95/Resume-Projects/tree/main/Ocean%20Data%20ML%20Platform%20with%20RAG)
 *Solo · Python, Spark, XGBoost, MLflow, Optuna, Qdrant, FastAPI, Docker*
 
 A platform over **10M+ ocean and weather sensor observations** from NOAA and ONC, two agencies whose NetCDF formats don't agree on much.
