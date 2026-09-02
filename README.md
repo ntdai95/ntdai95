@@ -58,9 +58,9 @@ Two-stage detector on CIC IoT-DIAD 2024. Stage one scores packets with k-means a
 ---
 
 ### [Ocean Data Platform with Retrieval-Augmented Search](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Ocean%20Data%20ML%20Platform%20with%20RAG)
-*Solo · Python, Spark, XGBoost, MLflow, Optuna, Qdrant, FastAPI, Docker, AWS*
+*Solo · Python, Spark, XGBoost, MLflow, Optuna, Qdrant, FastAPI, Docker*
 
-A platform over **10M+ ocean sensor observations** from NOAA and ONC, two agencies whose NetCDF formats don't agree on much.
+A platform over **10M+ ocean and weather sensor observations** from NOAA and ONC, two agencies whose NetCDF formats don't agree on much.
 
 - Bronze → Silver → Gold Spark layers for large-scale ETL
 - XGBoost forecasting validated on **chronological** holdouts, not random splits, since the series is temporally correlated
@@ -71,7 +71,7 @@ A platform over **10M+ ocean sensor observations** from NOAA and ONC, two agenci
 
 A naive persistence baseline (predict = previous reading) beats the tuned XGBoost model on raw RMSE. Expected for a high-frequency, smooth signal, and the reason this section reports both numbers rather than the model's R² alone. Extended the check across seven horizons out to 2 hours and a version with sensor context added (salinity, dissolved oxygen) — persistence won every horizon, and XGBoost's R² went negative past 30 minutes, the signature of a model overfitting training-period noise rather than learning real drift.
 
-**Ran the same benchmark on a signal that should be forecastable, to check the method rather than just the data.** Air temperature from a nearby ONC weather station has an obvious deterministic driver (the daily solar cycle) that persistence can't anticipate. There, XGBoost wins decisively from 3-12 hours out — persistence's R² actually goes negative at 6 and 12 hours, while XGBoost cuts RMSE by up to 48% at the 12-hour mark. Same pipeline, same evaluation, opposite result on the right kind of signal.
+**Ran the same benchmark, as a control, on a signal from the same ONC network that should be forecastable.** Air temperature from ONC's Baynes Sound weather station has an obvious deterministic driver (the daily solar cycle) that persistence can't anticipate. There, XGBoost wins decisively from 3-12 hours out — persistence's R² actually goes negative at 6 and 12 hours, while XGBoost cuts RMSE by up to 48% at the 12-hour mark. Same pipeline, same evaluation, opposite result on the right kind of signal.
 
 ---
 
