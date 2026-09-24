@@ -15,8 +15,8 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 
 | Project | What it is | Headline result |
 |---|---|---|
-| [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 99.6% recall at 0.82% FPR **and proof the benchmark leaked** |
-| [**Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects) | 10M+ sensor records, Spark → forecasting → RAG | Retrieval hit@k 0.9, term recall 0.85 |
+| [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 99.5% recall at 0.94% FPR **and proof the benchmark leaked** |
+| [**Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects) | 10.8M sensor records, Spark → forecasting → RAG | Retrieval hit@k 0.9, term recall 0.85 |
 | [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
 | [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) | Isolation Forest written from the paper | 1,093,203 records, linear scaling verified |
 | [**Parallel Image Engine**](https://github.com/ntdai95/Resume-Projects) | Three concurrency models in Go | 30% runtime reduction (BSP) |
@@ -49,18 +49,18 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 ### [Multi-Stage IoT Intrusion Detection](https://github.com/ntdai95/ECE592B-Capstone-Project)
 *Graduate capstone · team of 7 · Python, PyTorch, XGBoost*
 
-Two-stage detector on CIC IoT-DIAD 2024. Stage one scores packets with k-means and an autoencoder, Deep SVDD, and an Anomal-E edge-feature GNN, fused into a single score. Stage two is a supervised flow classifier that consumes it. Six models compared under a hard **1% false-positive budget**, best being multiclass XGBoost at **99.6% recall, 0.82% FPR, PR-AUC 0.995**.
+Two-stage detector on CIC IoT-DIAD 2024. Stage one scores packets with k-means and an autoencoder, Deep SVDD, and an Anomal-E edge-feature GNN, fused into a single score. Stage two is a supervised flow classifier that consumes it. Six models compared under a hard **1% false-positive budget**, best being binary XGBoost at **99.5% recall, 0.94% FPR, PR-AUC 0.989**, all six regenerated under split-first preprocessing.
 
-**The benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own — the same threshold that holds 1% FPR on one capture day costs over 30% on another. I ran a four-condition holdout to isolate it. Under an honest session-disjoint split, PR-AUC falls **0.995 → 0.242**, and holding recall costs over **34% FPR**, roughly thirty-four times the budget. What fails first is calibration, not ranking.
+**The benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own — the same threshold that holds 1% FPR on one capture day costs over 30% on another. I ran a four-condition holdout to isolate it. Under an honest session-disjoint split, PR-AUC falls **0.981 → 0.125**, and holding recall costs **25% FPR**, roughly twenty-five times the budget. What fails first is calibration, not ranking.
 
-**My contribution:** the leakage discovery, the four-condition experiment, and `verify_context_integrity.py`, which confirms all 23 engineered features stay causal, label-free and inside the budget.
+**My contribution:** the leakage discovery, the four-condition experiment, and `verify_context_integrity.py`, which rebuilds the 60-second connection-count feature on a truncated capture to prove it uses no future flows.
 
 ---
 
 ### [Ocean Data ML Platform with RAG](https://github.com/ntdai95/Resume-Projects/tree/main/Ocean%20Data%20ML%20Platform%20with%20RAG)
 *Solo · Python, Spark, XGBoost, MLflow, Optuna, Qdrant, FastAPI, Docker*
 
-A platform over **10M+ ocean and weather sensor observations** from NOAA and ONC, two agencies whose NetCDF formats don't agree on much.
+A platform over **10.8M ocean and weather sensor observations** from NOAA and ONC, two agencies whose NetCDF formats don't agree on much.
 
 - Bronze → Silver → Gold Spark layers for large-scale ETL
 - XGBoost forecasting validated on **chronological** holdouts, not random splits, since the series is temporally correlated
