@@ -5,7 +5,7 @@ Victoria, BC · [LinkedIn](https://linkedin.com/in/ntdai95) · [Portfolio](https
 
 Nearly two years supporting T-Mobile through BeaconFire Inc., building REST services in Java and Spring Boot alongside Kafka and Cassandra. Now in a graduate co-op program, mostly working on detection models and the pipelines underneath them.
 
-I'm interested in whether a result holds up. On my graduate capstone that meant proving our own benchmark leaked, and reporting that the honest score fell to **about a quarter** of where we'd started.
+I'm interested in whether a result holds up. On my graduate capstone that meant proving our own benchmark leaked, and reporting that the honest score fell to **about one-eighth** of where we'd started.
 
 **Available from January to December 2027** for a co-op or internship term. Authorized to work in Canada.
 
@@ -17,8 +17,8 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 |---|---|---|
 | [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 99.5% recall at 0.94% FPR **and proof the benchmark leaked** |
 | [**Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects) | 10.8M sensor records, Spark → forecasting → RAG | Retrieval hit@k 0.9, term recall 0.85 |
-| [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
 | [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) | Isolation Forest written from the paper | 1,093,203 records, linear scaling verified |
+| [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
 | [**Parallel Image Engine**](https://github.com/ntdai95/Resume-Projects) | Three concurrency models in Go | 30% runtime reduction (BSP) |
 
 ---
@@ -62,7 +62,7 @@ Two-stage detector on CIC IoT-DIAD 2024. Stage one scores packets with k-means a
 
 A platform over **10.8M ocean and weather sensor observations** from NOAA and ONC, two agencies whose NetCDF formats don't agree on much.
 
-- Bronze → Silver → Gold Spark layers for large-scale ETL
+- pandas/xarray Bronze ingestion followed by Spark Silver and Gold layers for large-scale ETL
 - XGBoost forecasting validated on **chronological** holdouts, not random splits, since the series is temporally correlated
 - Retrieval over dataset metadata with Sentence Transformers, Qdrant and Ollama, running locally end to end
 - MLflow for experiment tracking, Optuna for hyperparameter search, FastAPI and the vector store containerized with Docker Compose
@@ -94,7 +94,7 @@ Isolation Forest implemented **from the published algorithm rather than imported
 A booking service that had to interoperate with **four other teams' independent implementations** of one shared HTTP contract that nobody could change unilaterally.
 
 - **27 versioned `/v1/` endpoints** with published OpenAPI documentation
-- **71 pytest tests** across the API, database and reservation-rules layers, run on every change
+- **71 pytest tests** across the API, database and reservation-rules layers
 - Session tokens checked for existence, one-hour freshness and permission scope
 - 847-line SQLite layer over four tables enforcing rules on funds and availability
 
