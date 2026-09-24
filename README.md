@@ -75,18 +75,6 @@ A naive persistence baseline (predict = previous reading) beats the tuned XGBoos
 
 ---
 
-### [Distributed Facility Reservation System](https://github.com/ntdai95/Resume-Projects)
-*Applied Software Engineering · team of 4 · Python, FastAPI, SQLite, pytest*
-
-A booking service that had to interoperate with **four other teams' independent implementations** of one shared HTTP contract that nobody could change unilaterally.
-
-- **27 versioned `/v1/` endpoints** with published OpenAPI documentation
-- **71 pytest tests** across the API, database and reservation-rules layers, run on every change
-- Session tokens checked for existence, one-hour freshness and permission scope
-- 847-line SQLite layer over four tables enforcing rules on funds and availability
-
----
-
 ### [Anomaly Detection on 1M+ Species Observations](https://github.com/ntdai95/CSC502-Final-Project)
 *Systems for Massive Datasets · team of 3 · Python, PySpark, scikit-learn*
 
@@ -97,6 +85,18 @@ Isolation Forest implemented **from the published algorithm rather than imported
 - **Identified a previously undescribed geographic variant of feature-specific swamping**, and proposed rank transformation and density-aware subsampling as mitigations
 
 **AUC 0.67, with linear runtime scaling verified across the hyperparameter grid.**
+
+---
+
+### [Distributed Facility Reservation System](https://github.com/ntdai95/Resume-Projects)
+*Applied Software Engineering · team of 4 · Python, FastAPI, SQLite, pytest*
+
+A booking service that had to interoperate with **four other teams' independent implementations** of one shared HTTP contract that nobody could change unilaterally.
+
+- **27 versioned `/v1/` endpoints** with published OpenAPI documentation
+- **71 pytest tests** across the API, database and reservation-rules layers, run on every change
+- Session tokens checked for existence, one-hour freshness and permission scope
+- 847-line SQLite layer over four tables enforcing rules on funds and availability
 
 ---
 
