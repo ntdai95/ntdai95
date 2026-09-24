@@ -3,11 +3,11 @@
 **Applied Data Scientist · Machine Learning Engineer · Software Engineer**<br>
 Victoria, BC · [LinkedIn](https://linkedin.com/in/ntdai95) · [Portfolio](https://ntdai95.github.io) · ngotandai95@gmail.com
 
-Nearly two years at T-Mobile building REST services in Java and Spring Boot, alongside Kafka and Cassandra. Now in a graduate co-op program, mostly working on detection models and the pipelines underneath them.
+Nearly two years supporting T-Mobile through BeaconFire Inc., building REST services in Java and Spring Boot alongside Kafka and Cassandra. Now in a graduate co-op program, mostly working on detection models and the pipelines underneath them.
 
 I'm interested in whether a result holds up. On my graduate capstone that meant proving our own benchmark leaked, and reporting that the honest score fell to **about a quarter** of where we'd started.
 
-**Available from January to December 2027** for a co-op or internship term. Valid Canadian co-op work permit.
+**Available from January to December 2027** for a co-op or internship term. Authorized to work in Canada.
 
 ---
 
@@ -82,7 +82,7 @@ Isolation Forest implemented **from the published algorithm rather than imported
 
 - From-scratch Python implementation with PySpark processing
 - Stratified sampling across eight quantile bins, preserving species frequency distribution
-- **Identified a previously undescribed geographic variant of feature-specific swamping**, and proposed rank transformation and density-aware subsampling as mitigations
+- **Observed a geographic form of feature-specific swamping**, and proposed rank transformation and density-aware subsampling as mitigations
 
 **AUC 0.67, with linear runtime scaling verified across the hyperparameter grid.**
 
