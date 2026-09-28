@@ -62,7 +62,7 @@ Two-stage detector on CIC IoT-DIAD 2024. Stage one scores packets with k-means a
 
 A platform over **10.8M ocean and weather sensor observations** from NOAA and ONC, two agencies whose NetCDF formats don't agree on much.
 
-- pandas/xarray Bronze ingestion followed by Spark Silver and Gold layers for large-scale ETL
+- pandas/xarray Bronze ingestion followed by Spark Silver, then a **3.69M-row Gold** forecasting table
 - XGBoost forecasting validated on **chronological** holdouts, not random splits, since the series is temporally correlated
 - Retrieval over dataset metadata with Sentence Transformers, Qdrant and Ollama, running locally end to end
 - MLflow for experiment tracking, Optuna for hyperparameter search, FastAPI and the vector store containerized with Docker Compose
