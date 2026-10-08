@@ -51,7 +51,7 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 
 Two-stage detector on CIC IoT-DIAD 2024. Stage one scores packets with k-means and an autoencoder, Deep SVDD, and an Anomal-E edge-feature GNN, fused into a single score. Stage two is a supervised flow classifier that consumes it. Six models compared under a hard **1% false-positive budget**, best being binary XGBoost at **99.5% recall, 0.94% FPR, PR-AUC 0.989**, all six regenerated under split-first preprocessing.
 
-**The benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own — the same threshold that holds 1% FPR on one capture day costs over 30% on another. I ran a four-condition holdout to isolate it. Under an honest session-disjoint split, PR-AUC falls **0.981 → 0.125**, and holding recall costs **25% FPR**, roughly twenty-five times the budget. What fails first is calibration, not ranking.
+**The benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own — the same threshold that holds 1% FPR on one capture day costs 25 to 29% on another. I ran a four-condition holdout to isolate it. Under an honest session-disjoint split, PR-AUC falls **0.981 → 0.125**, and holding recall costs **25% FPR**, roughly twenty-five times the budget. What fails first is calibration, not ranking.
 
 **My contribution:** the leakage discovery, the four-condition experiment, and `verify_context_integrity.py`, which rebuilds the 60-second connection-count feature on a truncated capture to prove it uses no future flows.
 
