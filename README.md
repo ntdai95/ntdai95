@@ -67,9 +67,9 @@ A platform over **10.8M ocean and weather sensor observations** from NOAA and ON
 - Retrieval over dataset metadata with Sentence Transformers, Qdrant and Ollama, running locally end to end
 - MLflow for experiment tracking, Optuna for hyperparameter search, FastAPI and the vector store containerized with Docker Compose
 
-**Retrieval scored against a held-out query set of 10 natural-language questions: hit@k 0.9, term recall 0.85.**
+**Retrieval scored against a held-out query set covering every document: hit@k 0.9, term recall 0.85.**
 
-A naive persistence baseline (predict = previous reading) beats the tuned XGBoost model on raw RMSE. Expected for a high-frequency, smooth signal, and the reason this section reports both numbers rather than the model's R² alone. Extended the check across seven horizons out to 2 hours and a version with sensor context added (salinity, dissolved oxygen) — persistence won every horizon, and XGBoost's R² went negative past 30 minutes, the signature of a model overfitting training-period noise rather than learning real drift.
+On **water temperature**, a naive persistence baseline (predict = previous reading) beats the tuned XGBoost model on raw RMSE. Expected for a high-frequency, smooth signal, and the reason this section reports both numbers rather than the model's R² alone. Extended the check across seven horizons out to 2 hours and a version with sensor context added (salinity, dissolved oxygen) — persistence won every horizon, and XGBoost's R² went negative past 30 minutes, the signature of a model overfitting training-period noise rather than learning real drift.
 
 **Ran the same benchmark, as a control, on a signal from the same ONC network that should be forecastable.** Air temperature from ONC's Baynes Sound weather station has an obvious deterministic driver (the daily solar cycle) that persistence can't anticipate. There, XGBoost wins decisively from 3-12 hours out — persistence's R² actually goes negative at 6 and 12 hours, while XGBoost cuts RMSE by up to 48% at the 12-hour mark. Same pipeline, same evaluation, opposite result on the right kind of signal.
 
