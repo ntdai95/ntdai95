@@ -18,6 +18,7 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 | [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 99.5% recall at 0.94% FPR **and proof the benchmark leaked** |
 | [**Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects) | 10.8M sensor records, Spark → forecasting → RAG | Retrieval hit@k 0.9, term recall 0.85 |
 | [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) | Isolation Forest written from the paper | 1,093,203 records, linear scaling verified |
+| [**Fuel Blending System**](https://github.com/ntdai95/Shell.ai-Hackathon-2025) | Multi-output regression deployed through FastAPI | 0.64 MAPE versus XGBoost’s 1.29 |
 | [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
 | [**Parallel Image Engine**](https://github.com/ntdai95/Resume-Projects) | Three concurrency models in Go | 30% runtime reduction (BSP) |
 
@@ -85,6 +86,15 @@ Isolation Forest implemented **from the published algorithm rather than imported
 - **Observed a geographic form of feature-specific swamping**, and proposed rank transformation and density-aware subsampling as mitigations
 
 **AUC 0.67, with linear runtime scaling verified across the hyperparameter grid.**
+
+---
+
+### [End-to-End Multi-Output Fuel Blending System](https://github.com/ntdai95/Shell.ai-Hackathon-2025)
+*Solo · Shell.ai Hackathon 2025 · Python, CatBoost, FastAPI, Docker, AWS EC2*
+
+- Built and deployed multi-output regression across 10 blend properties through FastAPI on Dockerized AWS EC2.
+- Advanced CatBoost to deployment based on 5-fold cross-validation with a MAPE of 0.64 versus XGBoost’s 1.29.
+- Engineered entropy-based mixture metrics and serialized preprocessing so training and inference stayed consistent.
 
 ---
 
