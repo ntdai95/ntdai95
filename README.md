@@ -48,7 +48,7 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 ## Featured Work
 
 ### [Multi-Stage IoT Intrusion Detection](https://github.com/ntdai95/ECE592B-Capstone-Project)
-*Graduate capstone · team of 7 · Python, PyTorch, XGBoost*
+*Graduate capstone · team of 7 · Python, XGBoost, scikit-learn*
 
 Two-stage detector on CIC IoT-DIAD 2024. Stage one scores packets with k-means and an autoencoder, Deep SVDD, and an Anomal-E edge-feature GNN, fused into a single score. Stage two is a supervised flow classifier that consumes it. Six models compared under a hard **1% false-positive budget**, best being binary XGBoost at **99.5% recall, 0.94% FPR, PR-AUC 0.989**, all six regenerated under split-first preprocessing.
 
