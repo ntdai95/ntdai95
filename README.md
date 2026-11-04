@@ -20,7 +20,7 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 | [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) | Isolation Forest written from the paper | 1,093,203 records, linear scaling verified |
 | [**Fuel Blending System**](https://github.com/ntdai95/Shell.ai-Hackathon-2025) | Multi-output regression deployed through FastAPI | 0.64 MAPE versus XGBoost’s 1.29 |
 | [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
-| [**Parallel Image Engine**](https://github.com/ntdai95/Resume-Projects) | Three concurrency models in Go | 30% runtime reduction (BSP) |
+| [**Auction Marketplace Microservices**](https://github.com/ntdai95/Auction-Website) | Six Flask services, isolated databases, durable messaging | 14 containers, dependency-ordered startup |
 
 ---
 
@@ -28,7 +28,7 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 
 | | |
 |---|---|
-| **Languages** | Python · Java · Go · SQL |
+| **Languages** | Python · Java · SQL |
 | **Machine Learning** | PyTorch · scikit-learn · XGBoost · CatBoost · MLflow · Optuna · pandas · NumPy |
 | **NLP & Retrieval** | Sentence Transformers · DistilBERT · Qdrant · Ollama · RAG |
 | **Data at Scale** | Apache Spark · PySpark · Kafka · Cassandra · MySQL · SQLite · MongoDB · Neo4j |
@@ -110,9 +110,9 @@ A booking service that had to interoperate with **four other teams' independent 
 
 ---
 
-### [Parallel Image Processing Engine](https://github.com/ntdai95/Resume-Projects/tree/main/Parallel%20Image%20Processing%20Engine)
-*Solo · Go, goroutines, channels, sync.WaitGroup*
+### [Auction Marketplace Microservices](https://github.com/ntdai95/Auction-Website)
+*Team of 4 · Python, Flask, MySQL, MongoDB, RabbitMQ*
 
-Image convolution engine with three execution models: sequential, a fan-in/fan-out pipeline, and bulk-synchronous parallel. Custom 2D kernels for grayscale, sharpen, blur and edge detection.
+An auction marketplace split into six Flask REST services — items, users, auctions, transactions, watchlist and messages — each owning its own datastore, so a schema change in one cannot break its callers. Five sit behind their own MySQL database; messages uses MongoDB.
 
-**20% runtime reduction with fan-in/fan-out, 30% with BSP.**
+Messages move between services through **RabbitMQ** and are stored in MongoDB for durable delivery. The stack runs as **14 Docker containers** with dependency-ordered startup on a shared bridge network, so every database is up before the service that reads it.
