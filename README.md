@@ -3,7 +3,7 @@
 **Applied Data Scientist · Machine Learning Engineer · Software Engineer**<br>
 Victoria, BC · [LinkedIn](https://linkedin.com/in/ntdai95) · [Portfolio](https://ntdai95.github.io) · ngotandai95@gmail.com
 
-Nearly two years supporting T-Mobile through BeaconFire Inc., building REST services in Java and Spring Boot alongside Kafka and Cassandra. Now in a graduate co-op program, mostly working on detection models and the pipelines underneath them.
+I spent nearly two years supporting T-Mobile through BeaconFire Inc., where I built REST services in Java and Spring Boot alongside Kafka and Cassandra. I am now in a graduate co-op program, working mostly on detection models and the pipelines underneath them.
 
 I'm interested in whether a result holds up. On my graduate capstone that meant proving our own benchmark leaked, and reporting that the honest score fell to **about one-eighth** of where we'd started.
 
@@ -79,13 +79,13 @@ On **water temperature**, a naive persistence baseline (predict = previous readi
 ### [Anomaly Detection on 1M+ Species Observations](https://github.com/ntdai95/CSC502-Final-Project)
 *Systems for Massive Datasets · team of 3 · Python, PySpark, scikit-learn*
 
-Isolation Forest written **from the published algorithm instead of imported from a library**, on 1,093,203 eBird observations across British Columbia.
+I wrote Isolation Forest **from the published algorithm instead of importing it from a library**, and ran it on 1,093,203 eBird observations across British Columbia.
 
 - I wrote the implementation from scratch in Python and processed the data with PySpark.
 - I stratified the sampling across eight quantile bins, which preserves the species frequency distribution.
 - I **observed a geographic form of feature-specific swamping**, and proposed rank transformation and density-aware subsampling as mitigations.
 
-**AUC 0.67, with linear runtime scaling verified across the hyperparameter grid.**
+**The detector reached AUC 0.67, and runtime scaled linearly across the hyperparameter grid.**
 
 ---
 
