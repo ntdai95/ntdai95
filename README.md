@@ -7,7 +7,7 @@ Nearly two years supporting T-Mobile through BeaconFire Inc., building REST serv
 
 I'm interested in whether a result holds up. On my graduate capstone that meant proving our own benchmark leaked, and reporting that the honest score fell to **about one-eighth** of where we'd started.
 
-**Available from January to December 2027** for a co-op or internship term. Authorized to work in Canada.
+I am **available from January to December 2027** for a co-op or internship term, and I am authorized to work in Canada.
 
 ---
 
@@ -39,9 +39,9 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 
 ## Education
 
-**M.Eng. Applied Data Science**, University of Victoria – Sep 2025 – Dec 2027<br>
-**M.S. Computer Science**, University of Chicago – Sep 2020 – Mar 2022<br>
-**B.S. Economics**, University of Washington – Sep 2015 – Aug 2019
+**M.Eng. Applied Data Science**, University of Victoria - Sep 2025 - Dec 2027<br>
+**M.S. Computer Science**, University of Chicago - Sep 2020 - Mar 2022<br>
+**B.S. Economics**, University of Washington - Sep 2015 - Aug 2019
 
 ---
 
@@ -50,9 +50,9 @@ I'm interested in whether a result holds up. On my graduate capstone that meant 
 ### [Multi-Stage IoT Intrusion Detection](https://github.com/ntdai95/ECE592B-Capstone-Project)
 *Graduate capstone · team of 7 · Python, XGBoost, scikit-learn*
 
-Two-stage detector on CIC IoT-DIAD 2024. Stage one scores packets with k-means and an autoencoder, Deep SVDD, and an Anomal-E edge-feature GNN, fused into a single score. Stage two is a supervised flow classifier that consumes it. Six models compared under a hard **1% false-positive budget**, best being binary XGBoost at **99.5% recall, 0.94% FPR, PR-AUC 0.989**, all six regenerated under split-first preprocessing.
+The detector works in two stages on CIC IoT-DIAD 2024. Stage one scores packets with k-means and an autoencoder, Deep SVDD, and an Anomal-E edge-feature GNN, fused into a single score. Stage two is a supervised flow classifier that consumes it. Six models compared under a hard **1% false-positive budget**, best being binary XGBoost at **99.5% recall, 0.94% FPR, PR-AUC 0.989**, all six regenerated under split-first preprocessing.
 
-**The benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own — the same threshold that holds 1% FPR on one capture day costs 25 to 29% on another. I ran a four-condition holdout to isolate it. Under an honest session-disjoint split, PR-AUC falls **0.981 → 0.125**, and holding recall costs **25% FPR**, roughly twenty-five times the budget. What fails first is calibration, not ranking.
+**The benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own. The same threshold that holds 1% FPR on one capture day costs 25 to 29% on another. I ran a four-condition holdout to isolate it. Under an honest session-disjoint split, PR-AUC falls from **0.981 to 0.125**, and holding recall costs **25% FPR**, roughly twenty-five times the budget. Calibration is what breaks first. The ranking itself still holds up.
 
 **My contribution:** the leakage discovery, the four-condition experiment, and `verify_context_integrity.py`, which rebuilds the 60-second connection-count feature on a truncated capture to prove it uses no future flows.
 
@@ -63,27 +63,27 @@ Two-stage detector on CIC IoT-DIAD 2024. Stage one scores packets with k-means a
 
 A platform over **10.8M ocean and weather sensor observations** from NOAA and ONC, two agencies whose NetCDF formats don't agree on much.
 
-- pandas/xarray Bronze ingestion followed by Spark Silver, then a **3.69M-row Gold** forecasting table
-- XGBoost forecasting validated on **chronological** holdouts, not random splits, since the series is temporally correlated
-- Retrieval over dataset metadata with Sentence Transformers, Qdrant and Ollama, running locally end to end
-- MLflow for experiment tracking, Optuna for hyperparameter search, FastAPI and the vector store containerized with Docker Compose
+- Bronze ingestion runs in pandas and xarray, Spark handles the Silver layer, and the result is a **3.69M-row Gold** forecasting table.
+- I validated the XGBoost forecasts on **chronological** holdouts, because the series is temporally correlated and a random split would leak.
+- Retrieval runs over the dataset metadata with Sentence Transformers, Qdrant and Ollama, all of it local end to end.
+- MLflow tracks the experiments and Optuna runs the hyperparameter search, and Docker Compose containerizes FastAPI together with the vector store.
 
 **Retrieval scored against a held-out query set covering every document: hit@k 0.9, term recall 0.85.**
 
-On **water temperature**, a naive persistence baseline (predict = previous reading) beats the tuned XGBoost model on raw RMSE. Expected for a high-frequency, smooth signal, and the reason this section reports both numbers rather than the model's R² alone. Extended the check across seven horizons out to 2 hours and a version with sensor context added (salinity, dissolved oxygen) — persistence won every horizon, and XGBoost's R² went negative past 30 minutes, the signature of a model overfitting training-period noise rather than learning real drift.
+On **water temperature**, a naive persistence baseline (predict = previous reading) beats the tuned XGBoost model on raw RMSE. Expected for a high-frequency, smooth signal, and which is why this section gives both numbers instead of the model's R² on its own. Extended the check across seven horizons out to 2 hours and a version with sensor context added (salinity, dissolved oxygen). Persistence won every horizon, and XGBoost's R² went negative past 30 minutes, which is what a model looks like when it fits training-period noise instead of learning real drift.
 
-**Ran the same benchmark, as a control, on a signal from the same ONC network that should be forecastable.** Air temperature from ONC's Baynes Sound weather station has an obvious deterministic driver (the daily solar cycle) that persistence can't anticipate. There, XGBoost wins decisively from 3-12 hours out — persistence's R² actually goes negative at 6 and 12 hours, while XGBoost cuts RMSE by up to 48% at the 12-hour mark. Same pipeline, same evaluation, opposite result on the right kind of signal.
+**Ran the same benchmark, as a control, on a signal from the same ONC network that should be forecastable.** Air temperature from ONC's Baynes Sound weather station has an obvious deterministic driver (the daily solar cycle) that persistence can't anticipate. There, XGBoost wins decisively from 3-12 hours out. Persistence's R² actually goes negative at 6 and 12 hours, while XGBoost cuts RMSE by up to 48% at the 12-hour mark. The pipeline and the evaluation stayed the same. Only the signal changed, and the answer came out the other way.
 
 ---
 
 ### [Anomaly Detection on 1M+ Species Observations](https://github.com/ntdai95/CSC502-Final-Project)
 *Systems for Massive Datasets · team of 3 · Python, PySpark, scikit-learn*
 
-Isolation Forest implemented **from the published algorithm rather than imported**, on 1,093,203 eBird observations across British Columbia.
+Isolation Forest written **from the published algorithm instead of imported from a library**, on 1,093,203 eBird observations across British Columbia.
 
-- From-scratch Python implementation with PySpark processing
-- Stratified sampling across eight quantile bins, preserving species frequency distribution
-- **Observed a geographic form of feature-specific swamping**, and proposed rank transformation and density-aware subsampling as mitigations
+- I wrote the implementation from scratch in Python and processed the data with PySpark.
+- I stratified the sampling across eight quantile bins, which preserves the species frequency distribution.
+- I **observed a geographic form of feature-specific swamping**, and proposed rank transformation and density-aware subsampling as mitigations.
 
 **AUC 0.67, with linear runtime scaling verified across the hyperparameter grid.**
 
@@ -103,16 +103,16 @@ Isolation Forest implemented **from the published algorithm rather than imported
 
 A booking service that had to interoperate with **four other teams' independent implementations** of one shared HTTP contract that nobody could change unilaterally.
 
-- **27 versioned `/v1/` endpoints** with published OpenAPI documentation
-- **71 pytest tests** across the API, database and reservation-rules layers
-- Session tokens checked for existence, one-hour freshness and permission scope
-- 847-line SQLite layer over four tables enforcing rules on funds and availability
+- The service exposes **27 versioned `/v1/` endpoints**, each with published OpenAPI documentation.
+- **71 pytest tests** cover the API, database and reservation-rules layers.
+- Every request checks its session token for existence, one-hour freshness and permission scope.
+- An 847-line SQLite layer over four tables enforces the rules on funds and availability.
 
 ---
 
 ### [Auction Marketplace Microservices](https://github.com/ntdai95/Auction-Website)
 *Team of 4 · Python, Flask, MySQL, MongoDB, RabbitMQ*
 
-An auction marketplace split into six Flask REST services — items, users, auctions, transactions, watchlist and messages — each owning its own datastore, so a schema change in one cannot break its callers. Five sit behind their own MySQL database; messages uses MongoDB.
+An auction marketplace split into six Flask REST services (items, users, auctions, transactions, watchlist and messages), each owning its own datastore, so a schema change in one cannot break its callers. Five sit behind their own MySQL database; messages uses MongoDB.
 
 Messages move between services through **RabbitMQ** and are stored in MongoDB for durable delivery. The stack runs as **14 Docker containers** with dependency-ordered startup on a shared bridge network, so every database is up before the service that reads it.
