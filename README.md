@@ -19,7 +19,7 @@ I am **available from January to December 2027** for a co-op or internship term,
 | [**Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects) | 10.8M sensor records, Spark → forecasting → RAG | Retrieval hit@k 0.9, term recall 0.85 |
 | [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) | Isolation Forest written from the paper | 1,093,203 records, linear scaling verified |
 | [**Fuel Blending System**](https://github.com/ntdai95/Shell.ai-Hackathon-2025) | Multi-output regression deployed through FastAPI | 0.64 MAPE versus XGBoost’s 1.29 |
-| [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects) | REST service interoperating with 4 peer teams | 25 versioned endpoints, 71 pytest tests |
+| [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
 | [**Auction Marketplace Microservices**](https://github.com/ntdai95/Auction-Website) | Six Flask services, isolated databases, durable messaging | 14 containers, dependency-ordered startup |
 
 ---
@@ -103,7 +103,7 @@ I wrote Isolation Forest **from the published algorithm instead of importing it 
 
 This is a booking service that had to interoperate with **four other teams' independent implementations** of one shared HTTP contract that nobody could change unilaterally.
 
-- The service exposes **25 versioned `/v1/` endpoints**, each with published OpenAPI documentation.
+- The service exposes **27 versioned `/v1/` endpoints**, each with published OpenAPI documentation.
 - **71 pytest tests** cover the API, database and reservation-rules layers.
 - Every request checks its session token for existence, one-hour freshness and permission scope.
 - An 847-line SQLite layer over four tables enforces the rules on funds and availability.
