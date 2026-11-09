@@ -16,10 +16,10 @@ I am **available from January to December 2027** for a co-op or internship term,
 | Project | What it is | Headline result |
 |---|---|---|
 | [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 99.5% recall at 0.94% FPR **and proof the benchmark leaked** |
-| [**Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects) | 10.8M sensor records, Spark → forecasting → RAG | Retrieval hit@k 0.9, term recall 0.85 |
+| [**Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects/tree/main/Ocean%20Data%20ML%20Platform%20with%20RAG) | 10.8M sensor records, Spark → forecasting → RAG | Retrieval hit@k 0.9, term recall 0.85 |
 | [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) | Isolation Forest written from the paper | 1,093,203 records, linear scaling verified |
 | [**Fuel Blending System**](https://github.com/ntdai95/Shell.ai-Hackathon-2025) | Multi-output regression deployed through FastAPI | 0.64 MAPE versus XGBoost’s 1.29 |
-| [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
+| [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Facility%20Reservation%20System) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
 | [**Auction Marketplace Microservices**](https://github.com/ntdai95/Auction-Website) | Six Flask services, isolated databases, durable messaging | 14 containers, dependency-ordered startup |
 
 ---
@@ -70,13 +70,13 @@ This is a platform over **10.8M ocean and weather sensor observations** from NOA
 
 **I scored retrieval against a held-out query set covering every document, reaching hit@k 0.9 and term recall 0.85.**
 
-On **water temperature**, a naive persistence baseline (predict = previous reading) beats the tuned XGBoost model on raw RMSE. That is expected for a high-frequency, smooth signal, and it is why this section gives both numbers instead of the model's R² on its own. I extended the check across seven horizons out to 2 hours, and added a version with sensor context (salinity and dissolved oxygen). Persistence won every horizon, and XGBoost's R² went negative past 30 minutes, which is what a model looks like when it fits training-period noise instead of learning real drift.
+On **water temperature**, a naive persistence baseline (predict = previous reading) beats the tuned XGBoost model on raw RMSE. That is expected for a high-frequency, smooth signal, and it is why this section gives both numbers instead of the model's R² on its own. I extended the check across seven horizons out to 2 hours, and added a version with sensor context (salinity and dissolved oxygen). Persistence won every horizon, and XGBoost’s R² went negative past 30 minutes, which is what a model looks like when it fits training-period noise instead of learning real drift.
 
 **I ran the same benchmark as a control, on a signal from the same ONC network that should be forecastable.** Air temperature from ONC's Baynes Sound weather station has an obvious deterministic driver (the daily solar cycle) that persistence can't anticipate. There, XGBoost wins decisively from 3-12 hours out. Persistence's R² actually goes negative at 6 and 12 hours, while XGBoost cuts RMSE by up to 48% at the 12-hour mark. The pipeline and the evaluation stayed the same. Only the signal changed, and the answer came out the other way.
 
 ---
 
-### [Anomaly Detection on 1M+ Species Observations](https://github.com/ntdai95/CSC502-Final-Project)
+### [Anomaly Detection at Scale on Species Data](https://github.com/ntdai95/CSC502-Final-Project)
 *Systems for Massive Datasets · team of 3 · Python, PySpark, scikit-learn*
 
 I wrote Isolation Forest **from the published algorithm instead of importing it from a library**, and ran it on 1,093,203 eBird observations across British Columbia.
@@ -93,12 +93,12 @@ I wrote Isolation Forest **from the published algorithm instead of importing it 
 *Solo · Shell.ai Hackathon 2025 · Python, CatBoost, FastAPI, Docker, AWS EC2*
 
 - I built and deployed multi-output regression across 10 blend properties through FastAPI on Dockerized AWS EC2.
-- I advanced CatBoost to deployment on the strength of 5-fold cross-validation, where it reached a MAPE of 0.64 against XGBoost's 1.29.
+- I advanced CatBoost to deployment on the strength of 5-fold cross-validation, where it reached a MAPE of 0.64 against XGBoost’s 1.29.
 - I engineered entropy-based mixture metrics and serialized the preprocessing so training and inference stayed consistent.
 
 ---
 
-### [Distributed Facility Reservation System](https://github.com/ntdai95/Resume-Projects)
+### [Distributed Facility Reservation System](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Facility%20Reservation%20System)
 *Applied Software Engineering · team of 4 · Python, FastAPI, SQLite, pytest*
 
 This is a booking service that had to interoperate with **four other teams' independent implementations** of one shared HTTP contract that nobody could change unilaterally.
