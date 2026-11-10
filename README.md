@@ -14,11 +14,11 @@ I am **available from January to December 2027** for a co-op or internship term,
 ## At a Glance
 
 - The [**Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects/tree/main/Ocean%20Data%20ML%20Platform%20with%20RAG) processes 10.8M sensor records through Spark, forecasting, and RAG. Its retrieval benchmark reached hit@k 0.9 and term recall 0.85.
-- The [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) combines unsupervised scoring with supervised classification. It reached 99.5% recall at 0.94% FPR and exposed leakage in the benchmark.
-- The [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Facility%20Reservation%20System) interoperates with four peer teams through a shared REST contract. It exposes 27 versioned endpoints backed by 71 pytest tests.
+- The [**Multi-Stage IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) combines unsupervised scoring with supervised classification. It reached 99.5% recall at 0.94% FPR and exposed leakage in the benchmark.
+- The [**Distributed Facility Reservation System**](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Facility%20Reservation%20System) interoperates with four peer teams through a shared REST contract. It exposes 27 versioned endpoints backed by 71 pytest tests.
 - The [**Auction Marketplace Microservices**](https://github.com/ntdai95/Auction-Website) splits the marketplace across six Flask services with isolated databases and durable messaging. Its 14 Docker containers use dependency-ordered startup.
-- The [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) implements Isolation Forest from the published algorithm. It processed 1,093,203 records and verified linear runtime scaling.
-- The [**Fuel Blending System**](https://github.com/ntdai95/Shell.ai-Hackathon-2025) deploys multi-output regression through FastAPI. CatBoost reached a MAPE of 0.64 versus XGBoost’s 1.29.
+- The [**Anomaly Detection at Scale on Species Data**](https://github.com/ntdai95/CSC502-Final-Project) implements Isolation Forest from the published algorithm. It processed 1,093,203 records and verified linear runtime scaling.
+- The [**End-to-End Multi-Output Fuel Blending System**](https://github.com/ntdai95/Shell.ai-Hackathon-2025) deploys multi-output regression through FastAPI. CatBoost reached a MAPE of 0.64 versus XGBoost’s 1.29.
 
 ---
 
