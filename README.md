@@ -42,8 +42,10 @@ I am **available from January to December 2027** for a co-op or internship term,
 **Software Developer, T-Mobile (via BeaconFire Inc.)**<br>
 *Bellevue, WA · Jun 2022 - Apr 2024 · Java, Spring Boot, Kafka, Cassandra, Jenkins*
 
-- I built and maintained REST endpoints across 5+ Roaming Business System microservices, holding Cassandra query response times under 1 second across multiple data sources.
-- I automated weekly reprocessing of rejected roaming tests with Kafka, cutting manual effort by 80%. I also deployed features through Jenkins across 50+ releases.
+- Developed and maintained REST endpoints across 5+ Roaming Business System microservices in Java and Spring Boot.
+- Automated reprocessing of rejected roaming tests with weekly Kafka retries, cutting manual effort by 80%.
+- Traced 20+ cross service defects to their root cause and deployed features via Jenkins across 50+ releases.
+- Tuned Cassandra queries across multiple data sources to respond in under 1 second, debugging in Splunk.
 
 ---
 
