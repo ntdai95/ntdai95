@@ -7,7 +7,7 @@ I spent nearly two years supporting T-Mobile through BeaconFire Inc., building J
 
 I'm interested in whether a result holds up. On my graduate capstone that meant proving our own benchmark leaked, and reporting that the honest score fell to **about one-eighth** of where we'd started.
 
-I am **available from January to December 2027** for a co-op or internship term, and I am authorized to work in Canada.
+I am **available from January to December 2027** for a co-op or internship in software engineering, machine learning, data engineering, or data science, and I am authorized to work in Canada.
 
 ---
 
