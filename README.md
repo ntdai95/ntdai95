@@ -105,7 +105,7 @@ I wrote Isolation Forest **from the published algorithm instead of importing it 
 *Solo · Shell.ai Hackathon 2025 · Python, CatBoost, FastAPI, Docker, AWS EC2*
 
 - I built and deployed multi-output regression across 10 blend properties through FastAPI on Dockerized AWS EC2.
-- I advanced CatBoost to deployment on the strength of 5-fold cross-validation, where it reached a MAPE of 0.64 against XGBoost’s 1.29.
+- Advanced CatBoost to deployment based on 5-fold cross-validation with a MAPE of 0.64 versus XGBoost’s 1.29.
 - I engineered entropy-based mixture metrics and serialized the preprocessing so training and inference stayed consistent.
 
 ---
