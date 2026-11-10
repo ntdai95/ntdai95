@@ -1,6 +1,6 @@
 # Tan Dai Ngo
 
-**Software Engineer · Machine Learning Engineer · Data Engineer · Applied Data Scientist**<br>
+**Software Engineer building ML and data systems**<br>
 Victoria, BC · [LinkedIn](https://linkedin.com/in/ntdai95) · [Portfolio](https://ntdai95.github.io) · [Resume](https://ntdai95.github.io/documents/Ngo%20Tan%20Dai%20-%20Resume.pdf) · ngotandai95@gmail.com
 
 I spent nearly two years supporting T-Mobile through BeaconFire Inc., building Java and Spring Boot services backed by Kafka and Cassandra. I returned to graduate school to go deeper into ML and data systems, with recent work in Spark pipelines and deployed inference services.
@@ -15,8 +15,8 @@ I am **available from January to December 2027** for a co-op or internship term,
 
 | Project | What it is | Headline result |
 |---|---|---|
-| [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 99.5% recall at 0.94% FPR **and proof the benchmark leaked** |
 | [**Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects/tree/main/Ocean%20Data%20ML%20Platform%20with%20RAG) | 10.8M sensor records, Spark → forecasting → RAG | Retrieval hit@k 0.9, term recall 0.85 |
+| [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 99.5% recall at 0.94% FPR **and proof the benchmark leaked** |
 | [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) | Isolation Forest written from the paper | 1,093,203 records, linear scaling verified |
 | [**Fuel Blending System**](https://github.com/ntdai95/Shell.ai-Hackathon-2025) | Multi-output regression deployed through FastAPI | 0.64 MAPE versus XGBoost’s 1.29 |
 | [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Facility%20Reservation%20System) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
@@ -37,6 +37,16 @@ I am **available from January to December 2027** for a co-op or internship term,
 
 ---
 
+## Production Experience
+
+**Software Developer, T-Mobile (via BeaconFire Inc.)**<br>
+*Bellevue, WA · Jun 2022 - Apr 2024 · Java, Spring Boot, Kafka, Cassandra, Jenkins*
+
+- I built and maintained REST endpoints across 5+ Roaming Business System microservices, holding Cassandra query response times under 1 second across multiple data sources.
+- I automated weekly reprocessing of rejected roaming tests with Kafka, cutting manual effort by 80%. I also deployed features through Jenkins across 50+ releases.
+
+---
+
 ## Education
 
 **M.Eng. Applied Data Science**, University of Victoria - Sep 2025 - Dec 2027<br>
@@ -46,17 +56,6 @@ I am **available from January to December 2027** for a co-op or internship term,
 ---
 
 ## Featured Work
-
-### [Multi-Stage IoT Intrusion Detection](https://github.com/ntdai95/ECE592B-Capstone-Project)
-*Graduate capstone · team of 7 · Python, XGBoost, scikit-learn*
-
-The detector works in two stages on CIC IoT-DIAD 2024. Stage one scores packets with k-means and an autoencoder, Deep SVDD, and an Anomal-E edge-feature GNN, fused into a single score. Stage two is a supervised flow classifier that consumes it. I compared six models under a hard **1% false-positive budget**. Binary XGBoost came out best at **99.5% recall, 0.94% FPR, PR-AUC 0.989**, and I regenerated all six under split-first preprocessing.
-
-**The benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own. The same threshold that holds 1% FPR on one capture day costs 25 to 29% on another. I ran a four-condition holdout to isolate it. Under an honest session-disjoint split, PR-AUC falls from **0.981 to 0.125**, and holding recall costs **25% FPR**, roughly twenty-five times the budget. Calibration is what breaks first. The ranking itself still holds up.
-
-**My contribution** was the leakage discovery, the four-condition experiment, and `verify_context_integrity.py`, which rebuilds the 60-second connection-count feature on a truncated capture to prove it uses no future flows.
-
----
 
 ### [Ocean Data ML Platform with RAG](https://github.com/ntdai95/Resume-Projects/tree/main/Ocean%20Data%20ML%20Platform%20with%20RAG)
 *Solo · Python, Spark, XGBoost, MLflow, Optuna, Qdrant, FastAPI, Docker*
@@ -73,6 +72,17 @@ This is a platform over **10.8M ocean and weather sensor observations** from NOA
 On **water temperature**, a naive persistence baseline (predict = previous reading) beats the tuned XGBoost model on raw RMSE. That is expected for a high-frequency, smooth signal, and it is why this section gives both numbers instead of the model's R² on its own. I extended the check across seven horizons out to 2 hours, and added a version with sensor context (salinity and dissolved oxygen). Persistence won every horizon, and XGBoost’s R² went negative past 30 minutes, which is what a model looks like when it fits training-period noise instead of learning real drift.
 
 **I ran the same benchmark as a control, on a signal from the same ONC network that should be forecastable.** Air temperature from ONC's Baynes Sound weather station has an obvious deterministic driver (the daily solar cycle) that persistence can't anticipate. There, XGBoost wins decisively from 3-12 hours out. Persistence's R² actually goes negative at 6 and 12 hours, while XGBoost cuts RMSE by up to 48% at the 12-hour mark. The pipeline and the evaluation stayed the same. Only the signal changed, and the answer came out the other way.
+
+---
+
+### [Multi-Stage IoT Intrusion Detection](https://github.com/ntdai95/ECE592B-Capstone-Project)
+*Graduate capstone · team of 7 · Python, XGBoost, scikit-learn*
+
+The detector works in two stages on CIC IoT-DIAD 2024. Stage one scores packets with k-means and an autoencoder, Deep SVDD, and an Anomal-E edge-feature GNN, fused into a single score. Stage two is a supervised flow classifier that consumes it. I compared six models under a hard **1% false-positive budget**. Binary XGBoost came out best at **99.5% recall, 0.94% FPR, PR-AUC 0.989**, and I regenerated all six under split-first preprocessing.
+
+**The benchmark leaks capture-session identity.** Benign traffic was recorded on two days while each attack class occupies its own. The same threshold that holds 1% FPR on one capture day costs 25 to 29% on another. I ran a four-condition holdout to isolate it. Under an honest session-disjoint split, PR-AUC falls from **0.981 to 0.125**, and holding recall costs **25% FPR**, roughly twenty-five times the budget. Calibration is what breaks first. The ranking itself still holds up.
+
+**My contribution** was the leakage discovery, the four-condition experiment, and `verify_context_integrity.py`, which rebuilds the 60-second connection-count feature on a truncated capture to prove it uses no future flows.
 
 ---
 
@@ -124,7 +134,7 @@ Messages move between services through **RabbitMQ** and are stored in MongoDB fo
 | Project | What I built | Evidence and outcome |
 |---|---|---|
 | [**Stock Sentiment Analysis**](https://github.com/ntdai95/Resume-Projects/tree/main/Stock%20Sentiment%20Analysis) | I scored financial tweets with FinTwitBERT and joined daily sentiment to market returns in SQLite. Neo4j preserved the author-to-tweet-to-stock relationships. | NVDA was the only stock with a significant Granger result. The broader sample did not support influencer sentiment as a strong standalone signal. |
+| [**Support Ticket Triage**](https://github.com/ntdai95/ECE569A-Final-Project) | I compared TF-IDF with a linear SVM, retrieval kNN, and DistilBERT on the same ticket-routing task. | Retrieval kNN at k=5 won on all three labels, including queue accuracy of **0.702 versus 0.597** for DistilBERT. The Streamlit demo showed the retrieved tickets behind each prediction. |
 | [**Parallel Image Processing Engine**](https://github.com/ntdai95/Resume-Projects/tree/main/Parallel%20Image%20Processing%20Engine) | I implemented grayscale, sharpening, blurring, and edge detection in Go with custom convolution kernels and three execution models. | On batches of more than 30 images, the fan-in/fan-out pipeline reduced runtime by **20%**, while the bulk synchronous implementation reduced it by **30%**. |
 | [**Belay Real-Time Chat Application**](https://github.com/ntdai95/Personal-Projects/tree/main/Belay) | I built a Flask and JavaScript chat application with channels, messages, threaded replies, and shareable client-side routes. | The service used four SQLite tables, nested REST endpoints, hashed passwords, and a token checked on every authenticated request. |
-| [**Support Ticket Triage**](https://github.com/ntdai95/ECE569A-Final-Project) | I compared TF-IDF with a linear SVM, retrieval kNN, and DistilBERT on the same ticket-routing task. | Retrieval kNN at k=5 won on all three labels, including queue accuracy of **0.702 versus 0.597** for DistilBERT. The Streamlit demo showed the retrieved tickets behind each prediction. |
 | [**Loan Approval Classifier**](https://github.com/ntdai95/CSC503-Final-Project) | I compared tuned XGBoost and neural-network classifiers across baseline, SMOTE, class-weighted, and quantum-transformed feature sets. | I applied Fairlearn constraints across age and income and tested a specialist ensemble trained separately on inlier and outlier partitions. |
