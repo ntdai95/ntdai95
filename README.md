@@ -13,14 +13,12 @@ I am **available from January to December 2027** for a co-op or internship term,
 
 ## At a Glance
 
-| Project | What it is | Headline result |
-|---|---|---|
-| [**Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects/tree/main/Ocean%20Data%20ML%20Platform%20with%20RAG) | 10.8M sensor records, Spark → forecasting → RAG | Retrieval hit@k 0.9, term recall 0.85 |
-| [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) | Two-stage detector, unsupervised → supervised | 99.5% recall at 0.94% FPR **and proof the benchmark leaked** |
-| [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) | Isolation Forest written from the paper | 1,093,203 records, linear scaling verified |
-| [**Fuel Blending System**](https://github.com/ntdai95/Shell.ai-Hackathon-2025) | Multi-output regression deployed through FastAPI | 0.64 MAPE versus XGBoost’s 1.29 |
-| [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Facility%20Reservation%20System) | REST service interoperating with 4 peer teams | 27 versioned endpoints, 71 pytest tests |
-| [**Auction Marketplace Microservices**](https://github.com/ntdai95/Auction-Website) | Six Flask services, isolated databases, durable messaging | 14 containers, dependency-ordered startup |
+- The [**Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects/tree/main/Ocean%20Data%20ML%20Platform%20with%20RAG) processes 10.8M sensor records through Spark, forecasting, and RAG. Its retrieval benchmark reached hit@k 0.9 and term recall 0.85.
+- The [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) combines unsupervised scoring with supervised classification. It reached 99.5% recall at 0.94% FPR and exposed leakage in the benchmark.
+- The [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) implements Isolation Forest from the published algorithm. It processed 1,093,203 records and verified linear runtime scaling.
+- The [**Fuel Blending System**](https://github.com/ntdai95/Shell.ai-Hackathon-2025) deploys multi-output regression through FastAPI. CatBoost reached a MAPE of 0.64 versus XGBoost’s 1.29.
+- The [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Facility%20Reservation%20System) interoperates with four peer teams through a shared REST contract. It exposes 27 versioned endpoints backed by 71 pytest tests.
+- The [**Auction Marketplace Microservices**](https://github.com/ntdai95/Auction-Website) splits the marketplace across six Flask services with isolated databases and durable messaging. Its 14 Docker containers use dependency-ordered startup.
 
 ---
 
@@ -133,10 +131,8 @@ Messages move between services through **RabbitMQ** and are stored in MongoDB fo
 
 ## Additional Selected Work
 
-| Project | What I built | Evidence and outcome |
-|---|---|---|
-| [**Stock Sentiment Analysis**](https://github.com/ntdai95/Resume-Projects/tree/main/Stock%20Sentiment%20Analysis) | I scored financial tweets with FinTwitBERT and joined daily sentiment to market returns in SQLite. Neo4j preserved the author-to-tweet-to-stock relationships. | NVDA was the only stock with a significant Granger result. The broader sample did not support influencer sentiment as a strong standalone signal. |
-| [**Support Ticket Triage**](https://github.com/ntdai95/ECE569A-Final-Project) | I compared TF-IDF with a linear SVM, retrieval kNN, and DistilBERT on the same ticket-routing task. | Retrieval kNN at k=5 won on all three labels, including queue accuracy of **0.702 versus 0.597** for DistilBERT. The Streamlit demo showed the retrieved tickets behind each prediction. |
-| [**Parallel Image Processing Engine**](https://github.com/ntdai95/Resume-Projects/tree/main/Parallel%20Image%20Processing%20Engine) | I implemented grayscale, sharpening, blurring, and edge detection in Go with custom convolution kernels and three execution models. | On batches of more than 30 images, the fan-in/fan-out pipeline reduced runtime by **20%**, while the bulk synchronous implementation reduced it by **30%**. |
-| [**Belay Real-Time Chat Application**](https://github.com/ntdai95/Personal-Projects/tree/main/Belay) | I built a Flask and JavaScript chat application with channels, messages, threaded replies, and shareable client-side routes. | The service used four SQLite tables, nested REST endpoints, hashed passwords, and a token checked on every authenticated request. |
-| [**Loan Approval Classifier**](https://github.com/ntdai95/CSC503-Final-Project) | I compared tuned XGBoost and neural-network classifiers across baseline, SMOTE, class-weighted, and quantum-transformed feature sets. | I applied Fairlearn constraints across age and income and tested a specialist ensemble trained separately on inlier and outlier partitions. |
+- In [**Stock Sentiment Analysis**](https://github.com/ntdai95/Resume-Projects/tree/main/Stock%20Sentiment%20Analysis), I scored financial tweets with FinTwitBERT, joined daily sentiment to market returns in SQLite, and preserved author-to-tweet-to-stock relationships in Neo4j. NVDA was the only stock with a significant Granger result, and the broader sample did not support influencer sentiment as a strong standalone signal.
+- In [**Support Ticket Triage**](https://github.com/ntdai95/ECE569A-Final-Project), I compared TF-IDF with a linear SVM, retrieval kNN, and DistilBERT on the same routing task. Retrieval kNN at k=5 won on all three labels, including queue accuracy of **0.702 versus 0.597** for DistilBERT, and the Streamlit demo showed the retrieved tickets behind each prediction.
+- In the [**Parallel Image Processing Engine**](https://github.com/ntdai95/Resume-Projects/tree/main/Parallel%20Image%20Processing%20Engine), I implemented grayscale, sharpening, blurring, and edge detection in Go with custom convolution kernels and three execution models. On batches of more than 30 images, fan-in/fan-out reduced runtime by **20%**, while bulk synchronous execution reduced it by **30%**.
+- In the [**Belay Real-Time Chat Application**](https://github.com/ntdai95/Personal-Projects/tree/main/Belay), I built channels, messages, threaded replies, and shareable client-side routes with Flask and JavaScript. The service uses four SQLite tables, nested REST endpoints, hashed passwords, and a token checked on every authenticated request.
+- In the [**Loan Approval Classifier**](https://github.com/ntdai95/CSC503-Final-Project), I compared tuned XGBoost and neural-network classifiers across baseline, SMOTE, class-weighted, and quantum-transformed feature sets. I applied Fairlearn constraints across age and income and tested a specialist ensemble trained separately on inlier and outlier partitions.
