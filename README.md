@@ -1,9 +1,9 @@
 # Tan Dai Ngo
 
-**Applied Data Scientist · Machine Learning Engineer · Software Engineer**<br>
-Victoria, BC · [LinkedIn](https://linkedin.com/in/ntdai95) · [Portfolio](https://ntdai95.github.io) · ngotandai95@gmail.com
+**Software Engineer · Machine Learning Engineer · Data Engineer · Applied Data Scientist**<br>
+Victoria, BC · [LinkedIn](https://linkedin.com/in/ntdai95) · [Portfolio](https://ntdai95.github.io) · [Resume](https://ntdai95.github.io/documents/Ngo%20Tan%20Dai%20-%20Resume.pdf) · ngotandai95@gmail.com
 
-I spent nearly two years supporting T-Mobile through BeaconFire Inc., where I built REST services in Java and Spring Boot alongside Kafka and Cassandra. I am now in a graduate co-op program, working mostly on detection models and the pipelines underneath them.
+I spent nearly two years supporting T-Mobile through BeaconFire Inc., building Java and Spring Boot services backed by Kafka and Cassandra. I returned to graduate school to go deeper into ML and data systems, with recent work in Spark pipelines and deployed inference services.
 
 I'm interested in whether a result holds up. On my graduate capstone that meant proving our own benchmark leaked, and reporting that the honest score fell to **about one-eighth** of where we'd started.
 
@@ -28,12 +28,12 @@ I am **available from January to December 2027** for a co-op or internship term,
 
 | | |
 |---|---|
-| **Languages** | Python · Java · SQL |
-| **Machine Learning** | PyTorch · scikit-learn · XGBoost · CatBoost · MLflow · Optuna · pandas · NumPy |
-| **NLP & Retrieval** | Sentence Transformers · DistilBERT · Qdrant · Ollama · RAG |
-| **Data at Scale** | Apache Spark · PySpark · Kafka · Cassandra · MySQL · SQLite · MongoDB · Neo4j |
-| **Services & Deploy** | FastAPI · Flask · Spring Boot · Docker · AWS (EC2, S3) · Jenkins |
-| **Practice** | Git · pull requests · code review · pytest · OpenAPI |
+| **Languages** | Python · Java · Go · SQL · Cypher · JavaScript |
+| **Machine Learning & Statistics** | PyTorch · scikit-learn · XGBoost · CatBoost · Isolation Forest · SVM · kNN · SMOTE · Fairlearn · PennyLane · GARCH · Granger causality |
+| **NLP & Retrieval** | Sentence Transformers · DistilBERT · FinTwitBERT · TF-IDF · Qdrant · Ollama · RAG |
+| **Data & Graphs** | Apache Spark · PySpark · pandas · NumPy · Kafka · Cassandra · MySQL · SQLite · MongoDB · Neo4j · knowledge graphs |
+| **Backend & Systems** | Spring Boot · FastAPI · Flask · REST APIs · microservices · RabbitMQ · Go concurrency · goroutines · channels · bulk synchronous parallelism |
+| **Cloud, MLOps & Delivery** | AWS (EC2, S3) · Docker · Docker Compose · MLflow · Optuna · Streamlit · Jenkins · GitHub Actions · CI/CD · OpenAPI · pytest |
 
 ---
 
@@ -116,3 +116,15 @@ This is a booking service that had to interoperate with **four other teams' inde
 This is an auction marketplace split into six Flask REST services (items, users, auctions, transactions, watchlist and messages), each owning its own datastore, so a schema change in one cannot break its callers. Five sit behind their own MySQL database; messages uses MongoDB.
 
 Messages move between services through **RabbitMQ** and are stored in MongoDB for durable delivery. The stack runs as **14 Docker containers** with dependency-ordered startup on a shared bridge network, so every database is up before the service that reads it.
+
+---
+
+## Additional Selected Work
+
+| Project | What I built | Evidence and outcome |
+|---|---|---|
+| [**Stock Sentiment Analysis**](https://github.com/ntdai95/Resume-Projects/tree/main/Stock%20Sentiment%20Analysis) | I scored financial tweets with FinTwitBERT and joined daily sentiment to market returns in SQLite. Neo4j preserved the author-to-tweet-to-stock relationships. | NVDA was the only stock with a significant Granger result. The broader sample did not support influencer sentiment as a strong standalone signal. |
+| [**Parallel Image Processing Engine**](https://github.com/ntdai95/Resume-Projects/tree/main/Parallel%20Image%20Processing%20Engine) | I implemented grayscale, sharpening, blurring, and edge detection in Go with custom convolution kernels and three execution models. | On batches of more than 30 images, the fan-in/fan-out pipeline reduced runtime by **20%**, while the bulk synchronous implementation reduced it by **30%**. |
+| [**Belay Real-Time Chat Application**](https://github.com/ntdai95/Personal-Projects/tree/main/Belay) | I built a Flask and JavaScript chat application with channels, messages, threaded replies, and shareable client-side routes. | The service used four SQLite tables, nested REST endpoints, hashed passwords, and a token checked on every authenticated request. |
+| [**Support Ticket Triage**](https://github.com/ntdai95/ECE569A-Final-Project) | I compared TF-IDF with a linear SVM, retrieval kNN, and DistilBERT on the same ticket-routing task. | Retrieval kNN at k=5 won on all three labels, including queue accuracy of **0.702 versus 0.597** for DistilBERT. The Streamlit demo showed the retrieved tickets behind each prediction. |
+| [**Loan Approval Classifier**](https://github.com/ntdai95/CSC503-Final-Project) | I compared tuned XGBoost and neural-network classifiers across baseline, SMOTE, class-weighted, and quantum-transformed feature sets. | I applied Fairlearn constraints across age and income and tested a specialist ensemble trained separately on inlier and outlier partitions. |
