@@ -15,9 +15,9 @@ I am **available from January to December 2027** for a co-op or internship term,
 
 - The [**Ocean Data ML Platform with RAG**](https://github.com/ntdai95/Resume-Projects/tree/main/Ocean%20Data%20ML%20Platform%20with%20RAG) processes 10.8M sensor records through Spark, forecasting, and RAG. Its retrieval benchmark reached hit@k 0.9 and term recall 0.85.
 - The [**IoT Intrusion Detection**](https://github.com/ntdai95/ECE592B-Capstone-Project) combines unsupervised scoring with supervised classification. It reached 99.5% recall at 0.94% FPR and exposed leakage in the benchmark.
-- The [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) implements Isolation Forest from the published algorithm. It processed 1,093,203 records and verified linear runtime scaling.
 - The [**Facility Reservation System**](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Facility%20Reservation%20System) interoperates with four peer teams through a shared REST contract. It exposes 27 versioned endpoints backed by 71 pytest tests.
 - The [**Auction Marketplace Microservices**](https://github.com/ntdai95/Auction-Website) splits the marketplace across six Flask services with isolated databases and durable messaging. Its 14 Docker containers use dependency-ordered startup.
+- The [**Anomaly Detection at Scale**](https://github.com/ntdai95/CSC502-Final-Project) implements Isolation Forest from the published algorithm. It processed 1,093,203 records and verified linear runtime scaling.
 - The [**Fuel Blending System**](https://github.com/ntdai95/Shell.ai-Hackathon-2025) deploys multi-output regression through FastAPI. CatBoost reached a MAPE of 0.64 versus XGBoost’s 1.29.
 
 ---
@@ -86,19 +86,6 @@ The detector works in two stages on CIC IoT-DIAD 2024. Stage one scores packets 
 
 ---
 
-### [Anomaly Detection at Scale on Species Data](https://github.com/ntdai95/CSC502-Final-Project)
-*Systems for Massive Datasets · team of 3 · Python, PySpark, scikit-learn*
-
-I wrote Isolation Forest **from the published algorithm instead of importing it from a library**, and ran it on 1,093,203 eBird observations across British Columbia.
-
-- I wrote the implementation from scratch in Python and processed the data with PySpark.
-- I stratified the sampling across eight quantile bins, which preserves the species frequency distribution.
-- I **observed a geographic form of feature-specific swamping**, and proposed rank transformation and density-aware subsampling as mitigations.
-
-**The detector reached AUC 0.67, and runtime scaled linearly across the hyperparameter grid.**
-
----
-
 ### [Distributed Facility Reservation System](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Facility%20Reservation%20System)
 *Applied Software Engineering · team of 4 · Python, FastAPI, SQLite, pytest*
 
@@ -117,6 +104,19 @@ This is a booking service that had to interoperate with **four other teams' inde
 This is an auction marketplace split into six Flask REST services (items, users, auctions, transactions, watchlist and messages), each owning its own datastore, so a schema change in one cannot break its callers. Five sit behind their own MySQL database; messages uses MongoDB.
 
 Messages move between services through **RabbitMQ** and are stored in MongoDB for durable delivery. The stack runs as **14 Docker containers** with dependency-ordered startup on a shared bridge network, so every database is up before the service that reads it.
+
+---
+
+### [Anomaly Detection at Scale on Species Data](https://github.com/ntdai95/CSC502-Final-Project)
+*Systems for Massive Datasets · team of 3 · Python, PySpark, scikit-learn*
+
+I wrote Isolation Forest **from the published algorithm instead of importing it from a library**, and ran it on 1,093,203 eBird observations across British Columbia.
+
+- I wrote the implementation from scratch in Python and processed the data with PySpark.
+- I stratified the sampling across eight quantile bins, which preserves the species frequency distribution.
+- I **observed a geographic form of feature-specific swamping**, and proposed rank transformation and density-aware subsampling as mitigations.
+
+**The detector reached AUC 0.67, and runtime scaled linearly across the hyperparameter grid.**
 
 ---
 
