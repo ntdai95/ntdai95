@@ -35,7 +35,7 @@ I am **available from January to December 2027** for a co-op or internship in so
 
 ---
 
-## Experience
+## Production Experience
 
 **Software Developer, T-Mobile (via BeaconFire Inc.)**<br>
 *Bellevue, WA · Jun 2022 - Apr 2024 · Java, Spring Boot, Kafka, Cassandra, Jenkins*
@@ -45,13 +45,6 @@ I am **available from January to December 2027** for a co-op or internship in so
 - Traced 20+ cross service defects to their root cause and deployed features via Jenkins across 50+ releases.
 - Tuned Cassandra queries across multiple data sources to respond in under 1 second, debugging in Splunk.
 
-**Math and Computer Science Teacher, APU American International Schools**<br>
-*Da Nang City, Vietnam · Aug 2024 - Dec 2024*
-
-- Explained technical material to 50+ students with no prior background, adjusting the pitch for each student in real time.
-- Designed progressive assignments on top-down design, object-oriented programming, and code modularity.
-- Mentored students one-on-one on debugging and algorithmic reasoning by working through their own broken code.
-
 ---
 
 ## Education
@@ -59,8 +52,6 @@ I am **available from January to December 2027** for a co-op or internship in so
 **M.Eng. Applied Data Science**, University of Victoria - Sep 2025 - Dec 2027<br>
 **M.S. Computer Science**, University of Chicago - Sep 2020 - Mar 2022<br>
 **B.S. Economics**, University of Washington - Sep 2015 - Aug 2019
-
-**Credentials:** Google Advanced Data Analytics (2025), Shell.ai Hackathon 2025, IMC 64 Bids (top 250 of 1,500)
 
 ---
 
