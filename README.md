@@ -58,7 +58,7 @@ I am **available from January to December 2027** for a co-op or internship in so
 ## Featured Work
 
 ### [Ocean Data ML Platform with RAG](https://github.com/ntdai95/Resume-Projects/tree/main/Ocean%20Data%20ML%20Platform%20with%20RAG)
-*Solo · Python, Spark, XGBoost, MLflow, Optuna, Qdrant, FastAPI, Docker*
+*Personal Project · Python, Spark, XGBoost, MLflow, Optuna, Qdrant, FastAPI, Docker*
 
 This is a platform over **10.8M ocean and weather sensor observations** from NOAA and ONC, two agencies whose NetCDF formats don't agree on much.
 
