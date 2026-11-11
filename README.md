@@ -26,8 +26,8 @@ I am **available from January to December 2027** for a co-op or internship in so
 
 | | |
 |---|---|
-| **Languages** | Python · Java · Go · SQL · Cypher · JavaScript |
-| **Machine Learning & Statistics** | PyTorch · scikit-learn · XGBoost · CatBoost · Isolation Forest · SVM · kNN · SMOTE · Fairlearn · PennyLane · GARCH · Granger causality |
+| **Languages** | Python · Java · Go · SQL · MATLAB · JavaScript · HTML · CSS · Cypher |
+| **Machine Learning & Statistics** | PyTorch · scikit-learn · XGBoost · CatBoost · Isolation Forest · SVM · kNN · SMOTE · Fairlearn · GARCH · Granger causality |
 | **NLP & Retrieval** | Sentence Transformers · DistilBERT · FinTwitBERT · TF-IDF · Qdrant · Ollama · RAG |
 | **Data & Graphs** | Apache Spark · PySpark · pandas · NumPy · Kafka · Cassandra · MySQL · SQLite · MongoDB · Neo4j · knowledge graphs |
 | **Backend & Systems** | Spring Boot · FastAPI · Flask · REST APIs · microservices · RabbitMQ · Go concurrency · goroutines · channels · bulk synchronous parallelism |
@@ -76,7 +76,7 @@ On **water temperature**, a naive persistence baseline (predict = previous readi
 ---
 
 ### [Multi-Stage IoT Intrusion Detection](https://github.com/ntdai95/ECE592B-Capstone-Project)
-*Graduate capstone · team of 7 · Python, XGBoost, scikit-learn*
+*Capstone Project (ECE 592B), University of Victoria · team of 7 · Python, XGBoost, scikit-learn*
 
 The detector works in two stages on CIC IoT-DIAD 2024. Stage one scores packets with k-means and an autoencoder, Deep SVDD, and an Anomal-E edge-feature GNN, fused into a single score. Stage two is a supervised flow classifier that consumes it. I compared six models under a hard **1% false-positive budget**. Binary XGBoost came out best at **99.5% recall, 0.94% FPR, PR-AUC 0.989**, and I regenerated all six under split-first preprocessing.
 
@@ -87,7 +87,7 @@ The detector works in two stages on CIC IoT-DIAD 2024. Stage one scores packets 
 ---
 
 ### [Distributed Facility Reservation System](https://github.com/ntdai95/Resume-Projects/tree/main/Distributed%20Facility%20Reservation%20System)
-*Applied Software Engineering · team of 4 · Python, FastAPI, SQLite, pytest*
+*Applied Software Engineering (MPCS 51220), University of Chicago · team of 4 · Python, FastAPI, SQLite, pytest*
 
 This is a booking service that had to interoperate with **four other teams' independent implementations** of one shared HTTP contract that nobody could change unilaterally.
 
@@ -99,7 +99,7 @@ This is a booking service that had to interoperate with **four other teams' inde
 ---
 
 ### [Auction Marketplace Microservices](https://github.com/ntdai95/Auction-Website)
-*Team of 4 · Python, Flask, MySQL, MongoDB, RabbitMQ*
+*Topics in Software Engineering (MPCS 51205), University of Chicago · team of 4 · Python, Flask, MySQL, MongoDB, RabbitMQ*
 
 This is an auction marketplace split into six Flask REST services (items, users, auctions, transactions, watchlist and messages), each owning its own datastore, so a schema change in one cannot break its callers. Five sit behind their own MySQL database; messages uses MongoDB.
 
@@ -108,7 +108,7 @@ Messages move between services through **RabbitMQ** and are stored in MongoDB fo
 ---
 
 ### [Anomaly Detection at Scale on Species Data](https://github.com/ntdai95/CSC502-Final-Project)
-*Systems for Massive Datasets · team of 3 · Python, PySpark, scikit-learn*
+*Systems for Massive Datasets (CSC 502), University of Victoria · team of 3 · Python, PySpark, scikit-learn*
 
 I wrote Isolation Forest **from the published algorithm instead of importing it from a library**, and ran it on 1,093,203 eBird observations across British Columbia.
 
@@ -131,8 +131,8 @@ I wrote Isolation Forest **from the published algorithm instead of importing it 
 
 ## Additional Selected Work
 
-- In [**Stock Sentiment Analysis**](https://github.com/ntdai95/Resume-Projects/tree/main/Stock%20Sentiment%20Analysis), I worked in a team of four to score financial tweets with FinTwitBERT, join daily sentiment to market returns in SQLite, and preserve author-to-tweet-to-stock relationships in Neo4j. NVDA was the only stock with a significant Granger result, and the broader sample did not support influencer sentiment as a strong standalone signal.
+- In [**Stock Sentiment Analysis**](https://github.com/ntdai95/Resume-Projects/tree/main/Stock%20Sentiment%20Analysis), I worked in a team of four for Algorithms and Data Models (CSC 501) at the University of Victoria to score financial tweets with FinTwitBERT, join daily sentiment to market returns in SQLite, and preserve author-to-tweet-to-stock relationships in Neo4j. NVDA was the only stock with a significant Granger result, and the broader sample did not support influencer sentiment as a strong standalone signal.
 - In the [**Parallel Image Processing Engine**](https://github.com/ntdai95/Resume-Projects/tree/main/Parallel%20Image%20Processing%20Engine), I implemented grayscale, sharpening, blurring, and edge detection in Go with custom convolution kernels and three execution models. On batches of more than 30 images, fan-in/fan-out reduced runtime by **20%**, while bulk synchronous execution reduced it by **30%**.
 - In the [**Belay Real-Time Chat Application**](https://github.com/ntdai95/Personal-Projects/tree/main/Belay), I built channels, messages, threaded replies, and shareable client-side routes with Flask and JavaScript. The service uses four SQLite tables, nested REST endpoints, hashed passwords, and a token checked on every authenticated request.
-- In [**Support Ticket Triage**](https://github.com/ntdai95/ECE569A-Final-Project), I worked in a team of four to compare TF-IDF with a linear SVM, retrieval kNN, and DistilBERT on the same routing task. Retrieval kNN at k=5 won on all three labels, including queue accuracy of **0.702 versus 0.597** for DistilBERT, and the Streamlit demo showed the retrieved tickets behind each prediction.
-- In the [**Loan Approval Classifier**](https://github.com/ntdai95/CSC503-Final-Project), I worked in a team of six to compare tuned XGBoost and neural-network classifiers across baseline, SMOTE, class-weighted, and quantum-transformed feature sets. I applied Fairlearn constraints across age and income and tested a specialist ensemble trained separately on inlier and outlier partitions.
+- In [**Support Ticket Triage**](https://github.com/ntdai95/ECE569A-Final-Project), I worked in a team of four for Selected Topics in Computer Engineering: AI (ECE 569A) at the University of Victoria to compare TF-IDF with a linear SVM, retrieval kNN, and DistilBERT on the same routing task. Retrieval kNN at k=5 won on all three labels, including queue accuracy of **0.702 versus 0.597** for DistilBERT, and the Streamlit demo showed the retrieved tickets behind each prediction.
+- In the [**Loan Approval Classifier**](https://github.com/ntdai95/CSC503-Final-Project), I worked in a team of six for Data Mining (CSC 503) at the University of Victoria to compare tuned XGBoost and neural-network classifiers across baseline, SMOTE, class-weighted, and quantum-transformed feature sets. I applied Fairlearn constraints across age and income and tested a specialist ensemble trained separately on inlier and outlier partitions.
