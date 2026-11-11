@@ -5,7 +5,7 @@ Victoria, BC · [LinkedIn](https://linkedin.com/in/ntdai95) · [Portfolio](https
 
 I spent nearly two years supporting T-Mobile through BeaconFire Inc., building Java and Spring Boot services backed by Kafka and Cassandra. I returned to graduate school to go deeper into ML and data systems, with recent work in Spark pipelines and deployed inference services.
 
-I'm interested in whether a result holds up. On my graduate capstone that meant proving our own benchmark leaked, and reporting that the honest score fell to **about one-eighth** of where we'd started.
+I'm interested in whether a result holds up. On my graduate capstone, that meant showing our own benchmark leaked capture-session identity, and reporting that PR-AUC fell from **0.981 to 0.125** once the split was honest.
 
 I am **available from January to December 2027** for a co-op or internship in software engineering, machine learning, data engineering, or data science, and I am authorized to work in Canada.
 
