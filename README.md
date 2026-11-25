@@ -7,7 +7,7 @@ I spent nearly two years supporting T-Mobile through BeaconFire Inc., building J
 
 I'm interested in whether a result holds up. On my graduate capstone, that meant showing our own benchmark leaked capture-session identity, and reporting that PR-AUC fell from **0.981 to 0.125** once the split was honest.
 
-I am **available from January to December 2027** for a co-op or internship in software engineering, machine learning, data engineering, or data science, and I am authorized to work in Canada.
+I am **available from May 2027 to April 2028** for a co-op or internship in software engineering, machine learning, data engineering, or data science, and I am authorized to work in Canada.
 
 ---
 
@@ -49,7 +49,7 @@ I am **available from January to December 2027** for a co-op or internship in so
 
 ## Education
 
-**M.Eng. Applied Data Science**, University of Victoria - Sep 2025 - Dec 2027<br>
+**M.Eng. Applied Data Science**, University of Victoria - Sep 2025 - Apr 2028<br>
 **M.S. Computer Science**, University of Chicago - Sep 2020 - Mar 2022<br>
 **B.S. Economics**, University of Washington - Sep 2015 - Aug 2019
 
